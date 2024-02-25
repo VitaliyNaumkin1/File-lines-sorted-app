@@ -20,19 +20,15 @@ public class UserCommandHandler {
     private List<File> inputFiles;
 
     private Set<String> options;
-//    private Map<String,String> parameters;
 
-    private File defaultDirForSortedFiles;
+    private String namePrefixForSortedFiles;
     private Path directoryForSortedFiles;
-
-//    private Parameters parameters2 = Parameters.P; //В класс лучше с наследниками сделать?
 
     public UserCommandHandler(String[] args) {
         this.rawInputUserOptions = Arrays.asList(args);
         this.scanner = new Scanner(System.in);
         this.inputFiles = new ArrayList<>();
         this.options = new HashSet<>();
-//        dirForSortedFiles = Path.of("input files\\");
     }
 
     //java -jar util.jar -s -a -p sample- in1.txt in2.txt
@@ -40,6 +36,7 @@ public class UserCommandHandler {
         getOptionsFromUserInputLine();
         setDirForSortedFiles();
         getFilesForSorting();
+        getNamePrefixForSortedFiles();
         printAllInformation();
     }
 
@@ -48,6 +45,7 @@ public class UserCommandHandler {
         System.out.println(">>>>>Информация о ввёденных условиях программы<<<<<<");
         printChoosingFilesForSort();
         System.out.println(">Директория для исходящих файлов: " + directoryForSortedFiles.toAbsolutePath());
+        System.out.println(">Префикс имени сортированных файлов: " + namePrefixForSortedFiles);
         System.out.println("________________________________________________________");
     }
 
@@ -76,6 +74,7 @@ public class UserCommandHandler {
                 logger.info("указанный путь ведёт не к файлу");
                 continue;
             }
+
             inputFiles.add(new File(path.toString()));
             logger.info(">Вы добавили файл {} в список для сортировки. ", path.toAbsolutePath());
             while (true) {
@@ -111,78 +110,6 @@ public class UserCommandHandler {
             }
         }
         return countFiles != 0;
-    }
-
-    public boolean getInputFilesFromUserLine2() throws InvalidPathException {
-        for (String option : rawInputUserOptions) {
-            if (option.endsWith(".txt")) {
-//                Path path = Path.of("input files\\").resolve(option).toAbsolutePath();
-                File file = Path.of("input files\\").resolve(option).toFile();
-                inputFiles.add(file);
-                return true;
-
-            }
-
-            //какие то файлы не существуют если введены просто так.
-        }
-
-        if (inputFiles.isEmpty()) {
-//            return;
-        }
-
-        System.out.println("Вы не указали  файлы, содержимое которых будет сортироваться. Введите название файла из списка ниже или укажите полный путь к файлу");//logger
-        printInputFilesFromDefaultDir();
-        if (defaultDirIsEmpty()) {
-            while (true) {
-                System.out.println("Введите полный путь к файлу: ");
-                String userFilePath = scanner.nextLine();
-                File userInputFile = Path.of(userFilePath).toFile();
-
-                if (!userInputFile.exists()) {
-                    System.out.println("такого файла не существует");
-                    continue;
-                }
-
-                if (!userInputFile.isFile()) {
-                    System.out.println("Укажите путь к файлу,а не к директории ");
-                    continue;
-                }
-
-                System.out.println("Вы добавили файл: " + userInputFile.getName());
-                inputFiles.add(userInputFile);
-
-                int userChoice;
-                while (true) {
-                    System.out.println("Хотите добавить еще файл который хотите отсортировать?\n" +
-                            "Если да введите цифру - 1 ,если нет введите цифру - 0 ");
-                    while (true) {
-                        System.out.println("Введите цифру:");
-                        userChoice = scanner.nextInt();
-                        if (userChoice != 1 && userChoice != 0) {
-                            System.out.println("Не правильный ввод, должна быть цифра 1 или 0");
-                            continue;
-                        }
-                        if (userChoice == 0) {
-//                            return;//////////////////////////////////////////////////
-                        }
-                        break;
-                    }
-                    break;
-                }
-                //повторно могут ввести тот же файл.
-                //c:\1\2\2.1.txt
-            }
-        }
-        return false;/////////////////////////////////////////////////////
-    }
-
-    public boolean defaultDirIsEmpty() {
-        File[] dir = new File("input files\\").listFiles();//defaultDir прописать.
-        if (dir.length == 0) {
-            System.out.println("В стандартной директории нету файлов, укажите полный путь к своим файлам содержимое которых хотите разделить");/////?????
-            return true;
-        }
-        return false;
     }
 
     public void printInputFilesFromDefaultDir() {
@@ -230,7 +157,8 @@ public class UserCommandHandler {
         }
     }
 
-//    java -jar util.jar -s -a -o c:\1 -p sample- in1.txt in2.txt
+    //    java -jar util.jar -s -a -o c:\1 -p sample- in1.txt in2.txt       +
+//    java -jar util.jar -s -a -o -p sample- in1.txt in2.txt            +
     public void setDirForSortedFiles() throws RuntimeException {
         try {
             if (!Files.exists(DEFAULT_DIRECTORY)) {
@@ -253,8 +181,7 @@ public class UserCommandHandler {
                     directoryForSortedFiles = path;
                     return;
                 }
-//
-                logger.info("для опции -o программа не смогла найти указанную директорию либо вы её не указали");
+                logger.info(">для опции -o программа не смогла найти указанную директорию либо вы её не указали");
                 askUserEnterDirForSortedFiles();
                 return;
             }
@@ -268,11 +195,11 @@ public class UserCommandHandler {
 
     public void askUserEnterDirForSortedFiles() {  //--------RunTimeExeption пробросить и выше словить именно InvalidPathException
         while (true) {
-            logger.info("Введите путь для сортированных файлов или введите цифру 1 для выбора стандартной директории: ");
+            logger.info(">Введите путь для сортированных файлов или {} для выбора стандартной директории: ", "\"/default\"");
             String userText = scanner.nextLine();
 
-            if (userText.equals("1")) {
-                logger.info("Отсортированные файлы будут храниться в папке: " + DEFAULT_DIRECTORY.toAbsolutePath());
+            if (userText.equals("/default")) {
+                logger.info(">Отсортированные файлы будут храниться в папке: " + DEFAULT_DIRECTORY.toAbsolutePath());
                 directoryForSortedFiles = DEFAULT_DIRECTORY;
                 return;
             }
@@ -280,19 +207,76 @@ public class UserCommandHandler {
             Path path = Paths.get(userText);
             if (Files.isDirectory(path)) {
                 directoryForSortedFiles = path;
+                logger.info(">Отсортированные файлы будут храниться в папке: " + directoryForSortedFiles.toAbsolutePath());
                 return;
             }
 
-            try {
-                Files.createDirectories(path);
-                logger.info("Отсортированные файлы будут храниться в папке: " + DEFAULT_DIRECTORY.toAbsolutePath());
-            } catch (IOException | RuntimeException e) {
-                logger.error(e);
-                logger.info("Не удалось создать папку для отсортированных файлов");
-                askUserEnterDirForSortedFiles(); ///// ------ опасно ли ?
-            }
+            logger.info(">директории {} не существует ", path.toAbsolutePath());
 
+//            try {
+////                Files.createDirectories(path);///////// ------------- нужно ли это?
+////                logger.info(">Отсортированные файлы будут храниться в папке: " + DEFAULT_DIRECTORY.toAbsolutePath());
+//            } catch (IOException | RuntimeException e) {
+//                logger.error(e);
+//                logger.info(">Не удалось создать папку для отсортированных файлов");
+//                askUserEnterDirForSortedFiles(); ///// ------ опасно ли ?
+//            }
+        }
+    }
+
+    //      java -jar util.jar -s -a -o -p sample- in1.txt in2.txt          +
+    //      java -jar util.jar -s -a -o -p sample- in1.txt in2.txt          +
+    public void getNamePrefixForSortedFiles() {
+        if (!options.contains("-p")) {
+            return;
+        }
+        for (int i = 0; i < rawInputUserOptions.size(); i++) {
+            if (!rawInputUserOptions.get(i).equals("-p")) {
+                continue;
+            }
+            //нашли префикс в списке и проверяем не находится ли он на последнем элементе иначе ArrayIndexOutOfBoundsException
+            if (i == rawInputUserOptions.size() - 1) {  /// NULLLLL
+                return;
+            }
+            //Пользователь указал опцию -p для указания префикса, но не указал имя префикса, а следующий элемент в водимой строке это названия файлов.
+            String prefix = rawInputUserOptions.get(i + 1);
+            if (prefix.endsWith(".txt") && !prefix.equals(".txt")) {
+                logger.info(">Забыли указать префикс для имени сортированных файлов.");
+                askUserEnterNamePrefixForSortedFiles();
+                return;
+            }
+            try {
+                Path prefixName = Paths.get(prefix);
+                namePrefixForSortedFiles = prefixName.toString();
+                return;
+            } catch (RuntimeException e) {
+                logger.error(e);
+                logger.info(">Не допустимый префикс для имени файлов.");
+            }
+            break;
+        }
+        askUserEnterNamePrefixForSortedFiles();
+    }
+
+    //      java -jar util.jar -s -a -o -p in1.txt in2.txt
+    public void askUserEnterNamePrefixForSortedFiles() {
+        while (true) {
+            logger.info(">Введите префикс для имен сортированных файлов, или введите {} для того что бы имена файлов были без префикса: ", "\"/no\"");
+            String userText = scanner.nextLine();
+            if (userText.equals("/no")) {
+                logger.info(">Имена отсортированных файлов будут без префикса!");
+                return;
+            }
+            try {
+                Path prefixName = Paths.get(userText);
+                namePrefixForSortedFiles = prefixName.toString();
+                return;
+            } catch (RuntimeException e) {
+                logger.error(e);
+                logger.info(">Не допустимый префикс для имени файлов");
+            }
         }
     }
 
 }
+   

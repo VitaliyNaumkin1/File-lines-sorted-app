@@ -63,6 +63,8 @@ public class FileLineSorterApp {
             System.err.println("Не верный путь к файлу");
             //
         }
+
+
 //        userCommandHandler.printChoosingFilesForSort();
 //
 //        logger.info("Желаете добавить файлы к сортировке?");
