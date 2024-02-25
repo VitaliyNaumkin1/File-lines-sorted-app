@@ -1,6 +1,7 @@
 package ru.naumkin.java.test.sort.file.contents;
 
-import org.w3c.dom.ls.LSOutput;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.io.File;
 import java.nio.file.InvalidPathException;
@@ -20,8 +21,13 @@ public class FileLineSorterApp {
     private List<String> userParameters;
     private List<File> inputFiles;
 
+    private final Logger logger = LogManager.getLogger(FileLineSorterApp.class.getName());
+
+    static final Path DEFAULT_DIRECTORY = Paths.get("default directory");
+
     private File defaultDirForSortedFiles;
     private File dirForSortedFiles;
+    private UserCommandHandler userCommandHandler;
 
 
     public FileLineSorterApp(String[] args) {
@@ -29,6 +35,7 @@ public class FileLineSorterApp {
         this.inputFiles = new ArrayList<>();
         this.defaultDirForSortedFiles = Path.of("input files\\").toFile();
         this.dirForSortedFiles = defaultDirForSortedFiles;
+        this.userCommandHandler = new UserCommandHandler(args);
     }
 
     //java -jar util.jar -s -a -p sample- in1.txt in2.txt
@@ -49,127 +56,23 @@ public class FileLineSorterApp {
      */
     public void start() {
         try {
-            getFilesSpecifiedByUser();
+//            userCommandHandler.getFilesForSorting(); /// обработку кинуть в юзер хендлер
+            userCommandHandler.start();
         } catch (InvalidPathException e) {
             e.printStackTrace();
             System.err.println("Не верный путь к файлу");
             //
         }
-        printChoosingFilesForSort();
-        setParameters();
-        setPathForSortedFiles();
+//        userCommandHandler.printChoosingFilesForSort();
+//
+//        logger.info("Желаете добавить файлы к сортировке?");
+//        userCommandHandler.getOptionsFromUserInputLine();
+//        setPathForSortedFiles();
+
+
+
 
         //&&&&&77 СЛИШКОМ ЛИНЕЙНЫЙ КОД.
-    }
-
-    public void getFilesSpecifiedByUser() throws InvalidPathException {
-//        int countFiles = 0;
-        for (String parameter : rawInputUserParameters) {
-            if (parameter.endsWith(".txt")) {
-//                Path path = Path.of("input files\\").resolve(parameter).toAbsolutePath();
-                File file = Path.of("input files\\").resolve(parameter).toFile();
-                inputFiles.add(file);
-//                System.out.println(path);
-//                inputFiles.add()
-//                countFiles++;
-            }
-//            System.out.println("Вы не указали входящие файлы/файл");
-            //какие то файлы не существуют если введены просто так.
-        }
-
-        if (inputFiles.isEmpty()) {
-            return;
-        }
-
-        System.out.println("Вы не указали  файлы, содержимое которых будет сортироваться. Введите название файла из списка ниже или укажите полный путь к файлу");//logger
-        printInputFilesFromDefaultDir();
-        if (defaultDirIsEmpty()) {
-            while (true) {
-                System.out.println("Введите полный путь к файлу: ");
-                String userFilePath = scanner.nextLine();
-                File userInputFile = Path.of(userFilePath).toFile();
-
-                if (!userInputFile.exists()) {
-                    System.out.println("такого файла не существует");
-                    continue;
-                }
-
-                if (!userInputFile.isFile()) {
-                    System.out.println("Укажите путь к файлу,а не к директории ");
-                    continue;
-                }
-
-                System.out.println("Вы добавили файл: " + userInputFile.getName());
-                inputFiles.add(userInputFile);
-
-                int userChoice;
-                while (true) {
-                    System.out.println("Хотите добавить еще файл который хотите отсортировать?\n" +
-                            "Если да введите цифру - 1 ,если нет введите цифру - 0 ");
-                    while (true) {
-                        System.out.println("Введите цифру:");
-                        userChoice = scanner.nextInt();
-                        if (userChoice != 1 && userChoice != 0) {
-                            System.out.println("Не правильный ввод, должна быть цифра 1 или 0");
-                            continue;
-                        }
-                        if (userChoice == 0) {
-                            return;
-                        }
-                        break;
-                    }
-                    break;
-                }
-                //повторно могут ввести тот же файл.
-//c:\1\2\2.1.txt
-            }
-        }
-    }
-
-//    public boolean isInputFileExist(File userInputFile) {
-//        if (userInputFile.isDirectory()) {
-//            System.out.println("Вы ввели путь к директории, а не к файлу");
-//            return false;
-//        }
-//        return userInputFile.exists();
-//    }
-
-    public boolean defaultDirIsEmpty() {
-        File[] dir = new File("input files\\").listFiles();//defaultDir прописать.
-        if (dir.length == 0) {
-            System.out.println("В стандартной директории нету файлов, укажите полный путь к своим файлам содержимое которых хотите разделить");/////?????
-            return true;
-        }
-        return false;
-    }
-
-    public void printInputFilesFromDefaultDir() {
-        File[] dir = new File("input files\\").listFiles();
-        if (dir.length == 0) {
-            System.out.println("В стандартной директории нету файлов, укажите полный путь к своим файлам содержимое которых хотите разделить");/////?????
-        }
-        System.out.println("printInputFilesFromDefaultDir()");/////
-        System.out.println("Список файлов из стандартной директории:");
-        for (File file : dir) {
-            System.out.println(file.getName());
-        }
-    }
-
-    public boolean isParameterExist(String parameter) {
-        for (String inputParameter : rawInputUserParameters) {
-            if (inputParameter.equals(parameter)) {
-                return true;
-            }
-        }
-        return false;
-    }
-
-
-    //nio or io file?
-    public List<String> getLinesFromFile(File file) {
-        List<String> fileStrings = new ArrayList<>();
-
-        return fileStrings;
     }
 
     public void printChoosingFilesForSort() {
@@ -177,11 +80,6 @@ public class FileLineSorterApp {
         for (File file : inputFiles) {
             System.out.println(file.getName());
         }
-    }
-
-    public void userParametersHandler() {
-        //ПОКА ЧТО ИСПОЛЬЗУЕМ RAW her
-
     }
 
     //Заменить
@@ -248,10 +146,9 @@ public class FileLineSorterApp {
 //                        File pathForSortedFiles = Paths.get(rawInputUserParameters.get(i)).toFile();////////
                         dirForSortedFiles = pathForSortedFiles;
                         return;
-                    }else {
+                    } else {
 
                     }
-
 
 
                     /**
