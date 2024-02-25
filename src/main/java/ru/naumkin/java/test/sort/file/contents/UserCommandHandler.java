@@ -32,10 +32,14 @@ public class UserCommandHandler {
     }
 
     //java -jar util.jar -s -a -p sample- in1.txt in2.txt
-    public void start() {
+    public void run() {
         getOptionsFromUserInputLine();
         setDirForSortedFiles();
-        getFilesForSorting();
+        try {
+            getFilesForSorting(); /// наверное зря сюда пробросил обработку
+        } catch (InvalidPathException e) {
+            logger.error(e);
+        }
         getNamePrefixForSortedFiles();
         printAllInformation();
     }
@@ -56,7 +60,7 @@ public class UserCommandHandler {
         }
     }
 
-    public void getFilesForSorting() {
+    public void getFilesForSorting() throws InvalidPathException {
         if (getInputFilesFromUserLine()) {
             return;  ///нужно проверить не пустые ли файлы для сортировки, есть ли в них что то ..Отдельный метод. Или же впихнуть  askUserEnterFilesForSorting() в конец выше
         }
@@ -64,7 +68,7 @@ public class UserCommandHandler {
     }
 
     //   C:\1\2\2.1.txt
-    public void askUserEnterFilesForSorting() {  //--------RunTimeExeption пробросить и выше словить именно InvalidPathException
+    public void askUserEnterFilesForSorting() throws InvalidPathException {  //--------RunTimeExeption пробросить и выше словить именно InvalidPathException
         while (true) {
             printInputFilesFromDefaultDir();
             logger.info(">Введите путь к файлу который хотите добавить к сортировке или имя файла из стандартной директории: ");
@@ -279,4 +283,3 @@ public class UserCommandHandler {
     }
 
 }
-   

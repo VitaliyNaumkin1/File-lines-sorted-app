@@ -27,6 +27,7 @@ public class FileLineSorterApp {
 
     private File defaultDirForSortedFiles;
     private File dirForSortedFiles;
+    FileContentSorter fileContentSorter;
     private UserCommandHandler userCommandHandler;
 
 
@@ -36,6 +37,7 @@ public class FileLineSorterApp {
         this.defaultDirForSortedFiles = Path.of("input files\\").toFile();
         this.dirForSortedFiles = defaultDirForSortedFiles;
         this.userCommandHandler = new UserCommandHandler(args);
+        this.fileContentSorter = new FileContentSorter();
     }
 
     //java -jar util.jar -s -a -p sample- in1.txt in2.txt
@@ -57,12 +59,13 @@ public class FileLineSorterApp {
     public void start() {
         try {
 //            userCommandHandler.getFilesForSorting(); /// обработку кинуть в юзер хендлер
-            userCommandHandler.start();
+            userCommandHandler.run();
         } catch (InvalidPathException e) {
             e.printStackTrace();
             System.err.println("Не верный путь к файлу");
             //
         }
+        fileContentSorter.run();
 
 
 //        userCommandHandler.printChoosingFilesForSort();
@@ -72,104 +75,20 @@ public class FileLineSorterApp {
 //        setPathForSortedFiles();
 
 
-
-
-        //&&&&&77 СЛИШКОМ ЛИНЕЙНЫЙ КОД.
-    }
-
-    public void printChoosingFilesForSort() {
-        System.out.println("Выбранные файлы для сортировки: ");
-        for (File file : inputFiles) {
-            System.out.println(file.getName());
-        }
-    }
-
-    //Заменить
-    public void setParameters() {
-        int count = 0;
-        if (rawInputUserParameters.contains(Parameters.A.getStringVersion())) {
-            Parameters.A.setExist(true);
-            count++;
-        }
-        if (rawInputUserParameters.contains(Parameters.O.getStringVersion())) {
-            Parameters.O.setExist(true);
-
-            count++;
-        }
-
-        if (rawInputUserParameters.contains(Parameters.P.getStringVersion())) {
-            Parameters.P.setExist(true);
-            count++;
-        }
-
-        if (rawInputUserParameters.contains(Parameters.S.getStringVersion())) {
-            Parameters.S.setExist(true);
-            count++;
-        }
-
-        if (rawInputUserParameters.contains(Parameters.F.getStringVersion())) {
-            Parameters.F.setExist(true);
-            count++;
-        }
-
-        if (count == 0) {
-            Parameters.NO_PARAMETERS.setExist(true);
-        }
-    }
-
-
-    public boolean isValidPath(String path) {
-        try {
-            //Это не файл
-            if (new File(path).isFile()) {
-                System.out.println("Это файл");
-                return false;
-            }
-
-            Paths.get(path);
-        } catch (InvalidPathException | NullPointerException ex) {
-            return false;
-        }
-        return true;
-    }
-
-    public void setPathForSortedFiles() {
-        File pathForSortedFiles = null; //**************************************************
-//        if (Parameters.NO_PARAMETERS.isExist()) {
-//            dirForSortedFiles = defaultDirForSortedFiles; //// возможно лишнее.
+//    public boolean isValidPath(String path) {
+//        try {
+//            //Это не файл
+//            if (new File(path).isFile()) {
+//                System.out.println("Это файл");
+//                return false;
+//            }
+//
+//            Paths.get(path);
+//        } catch (InvalidPathException | NullPointerException ex) {
+//            return false;
 //        }
+//        return true;
+//    }
 
-        //Идея харнить состояние переменой в строке.
-        if (Parameters.O.isExist()) {
-            for (int i = 0; i < rawInputUserParameters.size(); i++) {
-                if (Parameters.O.getStringVersion().equals(rawInputUserParameters.get(i))) {
-                    pathForSortedFiles = new File(rawInputUserParameters.get(i + 1));
-                    if (isValidPath(pathForSortedFiles.getPath())) {
-//                        File pathForSortedFiles = Paths.get(rawInputUserParameters.get(i)).toFile();////////
-                        dirForSortedFiles = pathForSortedFiles;
-                        return;
-                    } else {
-
-                    }
-
-
-                    /**
-                     * ТУТ НАДО ВВЕСТИ ПРОВЕРКУ ВАЛИДНОСТИ ПУТИ
-                     * ЕСЛИ НЕТ ТО
-                     */
-                }
-            }
-
-            //Если не указали путь при параметре 0-
-            /**
-             * ///////////////////////////////////////////////// добавить зацикленность что бы проверять что файл точно есть. и проверки
-             */
-            System.out.println("Не возможно записать файлы ");
-
-        }
-
-        //Если параметр -o не указан, возвращаем стандартную директорию
-        dirForSortedFiles = defaultDirForSortedFiles;
     }
-
 }

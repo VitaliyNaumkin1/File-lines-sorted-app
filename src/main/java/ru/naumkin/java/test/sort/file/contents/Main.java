@@ -1,12 +1,14 @@
 package ru.naumkin.java.test.sort.file.contents;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
 
-        ///удалить скорее всего это только командная строка
+        ///удалить скорее всего это только
         if (args.length == 0) {
+            System.out.println(Arrays.toString(args));
             Scanner scanner = new Scanner(System.in);
             System.out.println("Введите имя файла");
         }
