@@ -4,7 +4,6 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import java.io.File;
-import java.nio.file.InvalidPathException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.*;
@@ -23,7 +22,7 @@ public class FileLineSorterApp {
 
     private final Logger logger = LogManager.getLogger(FileLineSorterApp.class.getName());
 
-    static final Path DEFAULT_DIRECTORY = Paths.get("default directory");
+    static final Path DEFAULT_DIRECTORY = Paths.get("input files");
 
     private File defaultDirForSortedFiles;
     private File dirForSortedFiles;
@@ -37,7 +36,7 @@ public class FileLineSorterApp {
         this.defaultDirForSortedFiles = Path.of("input files\\").toFile();
         this.dirForSortedFiles = defaultDirForSortedFiles;
         this.userCommandHandler = new UserCommandHandler(args);
-        this.fileContentSorter = new FileContentSorter();
+        this.fileContentSorter = new FileContentSorter(userCommandHandler);
     }
 
     //java -jar util.jar -s -a -p sample- in1.txt in2.txt
@@ -45,6 +44,8 @@ public class FileLineSorterApp {
 
     /**
      * ДОБАВИТЬ ЛОГГЕР И ВКЛЮЧТИЬ В ЭТО В СПИСОК
+     *
+     * Возможно все таки тут основные поля инициализировать и дальше передавать их, а не передавть в контруктор друг друга объекты
      */
 
 
@@ -57,16 +58,15 @@ public class FileLineSorterApp {
      * 3)задать путь для файлов исходящих.
      */
     public void start() {
-        try {
-//            userCommandHandler.getFilesForSorting(); /// обработку кинуть в юзер хендлер
-            userCommandHandler.run();
-        } catch (InvalidPathException e) {
-            e.printStackTrace();
-            System.err.println("Не верный путь к файлу");
-            //
-        }
-        fileContentSorter.run();
 
+//        try {
+////            userCommandHandler.getFilesForSorting(); /// обработку кинуть в юзер хендлер
+//        } catch (InvalidPathException e) {
+//            e.printStackTrace();
+//            System.err.println("Не верный путь к файлу");
+//            //
+//        }
+    }
 
 //        userCommandHandler.printChoosingFilesForSort();
 //
@@ -90,5 +90,4 @@ public class FileLineSorterApp {
 //        return true;
 //    }
 
-    }
 }

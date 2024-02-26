@@ -14,9 +14,9 @@ import java.util.*;
 import static ru.naumkin.java.test.sort.file.contents.FileLineSorterApp.DEFAULT_DIRECTORY;
 
 public class UserCommandHandler {
+    private Scanner scanner;
     private final Logger logger = LogManager.getLogger(UserCommandHandler.class.getName());
     private List<String> rawInputUserOptions;
-    private Scanner scanner;
     private List<File> inputFiles;
 
     private Set<String> options;
@@ -24,15 +24,28 @@ public class UserCommandHandler {
     private String namePrefixForSortedFiles;
     private Path directoryForSortedFiles;
 
+    public List<File> getInputFiles() {
+        return inputFiles;
+    }
+
+    public Set<String> getOptions() {
+        return options;
+    }
+
+    public Path getDirectoryForSortedFiles() {
+        return directoryForSortedFiles;
+    }
+
     public UserCommandHandler(String[] args) {
         this.rawInputUserOptions = Arrays.asList(args);
         this.scanner = new Scanner(System.in);
         this.inputFiles = new ArrayList<>();
         this.options = new HashSet<>();
+        run();
     }
 
     //java -jar util.jar -s -a -p sample- in1.txt in2.txt
-    public void run() {
+    private void run() {
         getOptionsFromUserInputLine();
         setDirForSortedFiles();
         try {
@@ -44,23 +57,27 @@ public class UserCommandHandler {
         printAllInformation();
     }
 
-    public void printAllInformation() {
+    /**
+     *
+     */
+    private void printAllInformation() {
         System.out.println("________________________________________________________");
         System.out.println(">>>>>Информация о ввёденных условиях программы<<<<<<");
         printChoosingFilesForSort();
         System.out.println(">Директория для исходящих файлов: " + directoryForSortedFiles.toAbsolutePath());
         System.out.println(">Префикс имени сортированных файлов: " + namePrefixForSortedFiles);
+        System.out.println(">Выбрана статистика для файлов : ");
         System.out.println("________________________________________________________");
     }
 
-    public void printChoosingFilesForSort() {
+    private void printChoosingFilesForSort() {
         System.out.println(">Выбранные файлы для сортировки: ");
         for (File file : inputFiles) {
             System.out.println("[" + file.getName() + "]");
         }
     }
 
-    public void getFilesForSorting() throws InvalidPathException {
+    private void getFilesForSorting() throws InvalidPathException {
         if (getInputFilesFromUserLine()) {
             return;  ///нужно проверить не пустые ли файлы для сортировки, есть ли в них что то ..Отдельный метод. Или же впихнуть  askUserEnterFilesForSorting() в конец выше
         }
@@ -68,7 +85,7 @@ public class UserCommandHandler {
     }
 
     //   C:\1\2\2.1.txt
-    public void askUserEnterFilesForSorting() throws InvalidPathException {  //--------RunTimeExeption пробросить и выше словить именно InvalidPathException
+    private void askUserEnterFilesForSorting() throws InvalidPathException {  //--------RunTimeExeption пробросить и выше словить именно InvalidPathException
         while (true) {
             printInputFilesFromDefaultDir();
             logger.info(">Введите путь к файлу который хотите добавить к сортировке или имя файла из стандартной директории: ");
@@ -100,7 +117,7 @@ public class UserCommandHandler {
     /**
      * Здесь может быть такое что могут просто так написать где угодно файл , а не в конце и что это будет тогда значить.
      */
-    public boolean getInputFilesFromUserLine() throws InvalidPathException {
+    private boolean getInputFilesFromUserLine() throws InvalidPathException {
         int countFiles = 0;
         for (String option : rawInputUserOptions) {
             if (option.endsWith(".txt")) {
@@ -116,7 +133,7 @@ public class UserCommandHandler {
         return countFiles != 0;
     }
 
-    public void printInputFilesFromDefaultDir() {
+    private void printInputFilesFromDefaultDir() {
         System.out.println("_______________________________________");
         File[] dir = new File("input files\\").listFiles();
         if (dir.length == 0) {
@@ -129,7 +146,10 @@ public class UserCommandHandler {
         System.out.println("_______________________________________");
     }
 
-    public void getOptionsFromUserInputLine() {
+    /**
+     * ДОПОЛНЕНИЕ: если указаны две опции для сортировки файлов -s и -f, то выбирается полная сортировка.
+     */
+    private void getOptionsFromUserInputLine() {
         /**
          * может быть несколько одинаковых параметров в 1 строке.
          */
@@ -151,6 +171,7 @@ public class UserCommandHandler {
         }
 
         if (rawInputUserOptions.contains("-f")) {
+            options.remove("-s"); ///// Оставить или убрать?
             options.add("-f");
             count++;
         }
@@ -163,7 +184,7 @@ public class UserCommandHandler {
 
     //    java -jar util.jar -s -a -o c:\1 -p sample- in1.txt in2.txt       +
 //    java -jar util.jar -s -a -o -p sample- in1.txt in2.txt            +
-    public void setDirForSortedFiles() throws RuntimeException {
+    private void setDirForSortedFiles() throws RuntimeException {
         try {
             if (!Files.exists(DEFAULT_DIRECTORY)) {
                 Files.createDirectory(DEFAULT_DIRECTORY); //---------- возможно это надо наверх прокинуть.Тут это не обработать логично.
@@ -197,7 +218,7 @@ public class UserCommandHandler {
          */
     }
 
-    public void askUserEnterDirForSortedFiles() {  //--------RunTimeExeption пробросить и выше словить именно InvalidPathException
+    private void askUserEnterDirForSortedFiles() {  //--------RunTimeExeption пробросить и выше словить именно InvalidPathException
         while (true) {
             logger.info(">Введите путь для сортированных файлов или {} для выбора стандартной директории: ", "\"/default\"");
             String userText = scanner.nextLine();
@@ -230,7 +251,7 @@ public class UserCommandHandler {
 
     //      java -jar util.jar -s -a -o -p sample- in1.txt in2.txt          +
     //      java -jar util.jar -s -a -o -p sample- in1.txt in2.txt          +
-    public void getNamePrefixForSortedFiles() {
+    private void getNamePrefixForSortedFiles() {
         if (!options.contains("-p")) {
             return;
         }
@@ -263,7 +284,7 @@ public class UserCommandHandler {
     }
 
     //      java -jar util.jar -s -a -o -p in1.txt in2.txt
-    public void askUserEnterNamePrefixForSortedFiles() {
+    private void askUserEnterNamePrefixForSortedFiles() {
         while (true) {
             logger.info(">Введите префикс для имен сортированных файлов, или введите {} для того что бы имена файлов были без префикса: ", "\"/no\"");
             String userText = scanner.nextLine();
@@ -281,5 +302,4 @@ public class UserCommandHandler {
             }
         }
     }
-
 }

@@ -14,7 +14,7 @@
         <!-- ALL < Trace < Debug < Info < Warn < Error < Fatal< OFF -->
         <Root level="debug">
             <AppenderRef ref="STDOUT"/>
-            <AppenderRef ref="File"/>
+            <AppenderRef ref="File"/>а
         </Root>
         <Logger name="ru.li.logging.service" level="info"/>
     </Loggers>
