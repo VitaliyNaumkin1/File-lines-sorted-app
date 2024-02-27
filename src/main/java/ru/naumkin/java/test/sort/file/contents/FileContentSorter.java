@@ -16,10 +16,7 @@ import java.io.*;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.regex.Pattern;
 
 import static ru.naumkin.java.test.sort.file.contents.FileLineSorterApp.DEFAULT_DIRECTORY;
@@ -41,6 +38,8 @@ public class FileContentSorter {
 
     private StatisticMode statisticMode;
     private Counter counter = new Counter(StatisticMode.FULL);
+    //    private Map<File, Long> fileAndPointerPosition = new HashMap<>();  //// в конструкторе инициализвровать
+    private Map<File, Long> fileAndPointerPosition = new TreeMap<>();  //// в конструкторе инициализвровать
 
     /**
      * ВРЕМЕННО ПУСТЬ БУДЕТ ТУТ
@@ -72,22 +71,22 @@ public class FileContentSorter {
 //        userCommandHandler.getOptions().
 //    }
     private void run() {
-        readLinesFromFiles____SORTING();
-        System.out.println("__________________________");
-        System.out.println("ЦЕЛЫЕ:");
-        for (Long l : listWithSortedLongs) {
-            System.out.println(l);
-        }
-        System.out.println("__________________________");
-        System.out.println("ВЕЩЕСТВЕННЫЕ: ");
-        for (Double l : listWithSortedDoubles) {
-            System.out.println(l);
-        }
-        System.out.println("__________________________");
-        System.out.println("Строки:");
-        for (String l : listWithSortedStrings) {
-            System.out.println(l);
-        }
+        sortingLinesFromInputFiles();
+//        System.out.println("__________________________");
+//        System.out.println("ЦЕЛЫЕ:");
+//        for (Long l : listWithSortedLongs) {
+//            System.out.println(l);
+//        }
+//        System.out.println("__________________________");
+//        System.out.println("ВЕЩЕСТВЕННЫЕ: ");
+//        for (Double l : listWithSortedDoubles) {
+//            System.out.println(l);
+//        }
+//        System.out.println("__________________________");
+//        System.out.println("Строки:");
+//        for (String l : listWithSortedStrings) {
+//            System.out.println(l);
+//        }
     }
 
 
@@ -106,26 +105,67 @@ public class FileContentSorter {
     }
 
     private void sortingLinesFromInputFiles() {
-
-        for (File file : filesToSort) {
-
+        //описание сделать толковое что это такое Long
+        //Для каждого файла в значении хранится положение указателя с какой строки начать дальше считывать RandomAcsessFile
+        fillMapWithPointerPositions();
+        int count = 0;
+        while (true) {
+            if (fileAndPointerPosition.isEmpty()){
+                break;
+            }
+            for (Map.Entry<File, Long> entry : fileAndPointerPosition.entrySet()) {
+                File file = entry.getKey();
+                long pointerPosition = entry.getValue();
+                readNextLineFromFile(file, pointerPosition);
+            }
         }
 
-    }
-
-    public void test(){
 
     }
-    private String readNextLineFromFile(File file, long position) {
-        try (RandomAccessFile randomAccessFile = new RandomAccessFile(file, "r")) {
-            String line = new String(randomAccessFile.readLine().getBytes(StandardCharsets.ISO_8859_1), StandardCharsets.UTF_8);
+
+    //название изменить
+    public void setPositionOfPointerToFile() {
+
+    }
+
+    public void test() {
+
+    }
+
+    //    private String readNextLineFromFile(File file, long pointerPositionInFile) {
+//        try (RandomAccessFile randomAccessFile = new RandomAccessFile(file, "r")) {
+//            randomAccessFile.seek(pointerPositionInFile);
+//            String line = new String(randomAccessFile.readLine().getBytes(StandardCharsets.ISO_8859_1), StandardCharsets.UTF_8);
+//            //??????? СЮда в метод нужно видимо передавтаь либо весь список либо один элемент
+//            long pointerPosition = randomAccessFile.getFilePointer();
+//            setCurrentPointerPositionForFile(file, pointerPosition);
+//            return line;
+//        } catch (IOException e) {
+//            logger.error(e);
+//        }
+//        return "";
+//    }
+    private void readNextLineFromFile(File file, long pointerPositionInFile) {
+
+        try (RandomAccessFile randomAccessFile = new RandomAccessFile(file.toPath().toString(), "r")) {
+            randomAccessFile.seek(pointerPositionInFile);
+            String line;
+            if ((line = randomAccessFile.readLine()) == null) {
+                fileAndPointerPosition.remove(file);
+                return;
+            }
+//             line = new String(randomAccessFile.readLine().getBytes(StandardCharsets.ISO_8859_1), StandardCharsets.UTF_8);
+            String lineUtf8 = new String(line.getBytes(StandardCharsets.ISO_8859_1),StandardCharsets.UTF_8);
             //??????? СЮда в метод нужно видимо передавтаь либо весь список либо один элемент
-            return line;
+            long pointerPosition = randomAccessFile.getFilePointer();
+            setCurrentPointerPositionForFile(file, pointerPosition);
+            determineTypeOfString(lineUtf8);
         } catch (IOException e) {
+            e.printStackTrace();
             logger.error(e);
         }
-        return null;
     }
+
 
     private void determineTypeOfString(String line) {
         if (NumberUtils.isCreatable(line)) {
@@ -154,7 +194,7 @@ public class FileContentSorter {
         }
         if (typeOfLine.equals(TypeOfLine.INTEGER)) {
             String fileName = namePrefix.append("integers.txt").toString();
-            pathToCreatableFile = directoryForSortedFiles.resolve(fileName);  ////может тоже так же вынести 
+            pathToCreatableFile = directoryForSortedFiles.resolve(fileName);  ////может тоже так же вынести
 //            createDirectoriesForOutputFiles(pathToCreatableFile);
         }
         if (typeOfLine.equals(TypeOfLine.FLOATS)) {
@@ -177,6 +217,7 @@ public class FileContentSorter {
         try (FileWriter writer = new FileWriter(pathToCreatableFile.toString(), true)) {
             writer.write(line);
             writer.append("\n");
+            writer.flush();
         } catch (IOException e) {
             logger.error(e);
         }
@@ -186,13 +227,17 @@ public class FileContentSorter {
     /*
     EXCEPTION
      */
-    public void createDirectoriesForOutputFiles(Path pathToCreatableFile) {
-        if (Files.exists(pathToCreatableFile.getParent())) {
+    public void createDirectoriesForOutputFiles(Path dirForSortedFiles) {
+
+//        if (Files.exists(dirForSortedFiles.getParent())) {
+//            return;
+//        }
+        if (Files.exists(dirForSortedFiles)) {
             return;
         }
 
         try {
-            Files.createDirectories(pathToCreatableFile.getParent());
+            Files.createDirectories(dirForSortedFiles.getParent());
         } catch (IOException e) {
             logger.error(e);
             logger.info("не удалось создать директорию для файлов с результатами сортировки. Была выбрана стандартная директория: " + DEFAULT_DIRECTORY.toAbsolutePath());
@@ -230,6 +275,21 @@ public class FileContentSorter {
             writer.write("hello java epta nu davay");
             writer.append("\n");
             writer.write("YOUUEEEEEE");
+        }
+    }
+
+    private void fillMapWithPointerPositions() {
+        for (int i = filesToSort.size() - 1; i >= 0; i--) {
+            fileAndPointerPosition.put(filesToSort.get(i), 0L);
+        }
+    }
+
+    private void setCurrentPointerPositionForFile(File file, long pointerPosition) {
+
+        fileAndPointerPosition.put(file, pointerPosition);///
+        System.out.println("_____________");
+        for (Map.Entry<File, Long> entry : fileAndPointerPosition.entrySet()) {
+            System.out.println(entry.getKey() + " " + entry.getValue());
         }
     }
 

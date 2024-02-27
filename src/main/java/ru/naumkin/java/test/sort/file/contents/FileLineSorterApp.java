@@ -22,7 +22,7 @@ public class FileLineSorterApp {
 
     private final Logger logger = LogManager.getLogger(FileLineSorterApp.class.getName());
 
-    static final Path DEFAULT_DIRECTORY = Paths.get("input files");
+    static final Path DEFAULT_DIRECTORY = Paths.get("input files\\");
 
     private File defaultDirForSortedFiles;
     private File dirForSortedFiles;

@@ -25,6 +25,11 @@ public class UserCommandHandler {
 
     private String namePrefixForSortedFiles;
     private Path directoryForSortedFiles;
+    private Path inputFileDirectory;
+
+    public Path getInputFileDirectory() {
+        return inputFileDirectory;
+    }
 
     public List<File> getInputFiles() {
         return inputFiles;
@@ -43,6 +48,7 @@ public class UserCommandHandler {
     }
 
     public UserCommandHandler(String[] args) {
+        this.inputFileDirectory = DEFAULT_DIRECTORY;
         this.rawInputUserOptions = Arrays.asList(args);
         this.scanner = new Scanner(System.in);
         this.inputFiles = new ArrayList<>();
@@ -74,6 +80,10 @@ public class UserCommandHandler {
         System.out.println(">Префикс имени сортированных файлов: " + namePrefixForSortedFiles);
         System.out.println(">Выбрана статистика для файлов : ");
         System.out.println("________________________________________________________");
+
+        for (File inputFile : inputFiles) {
+            System.out.println(inputFile.getAbsolutePath());
+        }
     }
 
     private void printChoosingFilesForSort() {
@@ -123,11 +133,40 @@ public class UserCommandHandler {
     /**
      * Здесь может быть такое что могут просто так написать где угодно файл , а не в конце и что это будет тогда значить.
      */
+//    private boolean getInputFilesFromUserLine() throws InvalidPathException {
+//        int countFiles = 0;
+//        for (String option : rawInputUserOptions) {
+//            if (option.endsWith(".txt")) {
+//                Path path = inputFileDirectory.resolve(option);
+//                if (!Files.isDirectory(path)) {
+//                    inputFiles.add(new File(path.toString()));///может быть повторное добавление одно и того же файла?
+//                    countFiles++;
+//                    continue;
+//                }
+//                logger.info("{} не является файлом ", path.toAbsolutePath()); /// тут щее надо подумать что может быть итддддд
+//            }
+//        }
+//        return countFiles != 0;
+//    }
+
+    /**
+     * Надо подумать над этоим как правильно тут выцепить файлы логику продумать.
+     */
     private boolean getInputFilesFromUserLine() throws InvalidPathException {
         int countFiles = 0;
         for (String option : rawInputUserOptions) {
-            if (option.endsWith(".txt")) {
-                Path path = Paths.get(option);
+            if (!option.endsWith(".txt")) {
+                continue;
+            }
+            //если указано только имя файла(int.txt), проверяем есть ли он в текущей папке проекта: input files
+            Path pathFileInDefaultDir = inputFileDirectory.resolve(option);
+            if (Files.exists(pathFileInDefaultDir)) {
+                inputFiles.add(new File(pathFileInDefaultDir.toString()));          ////&&&&&
+                countFiles++;
+                continue;
+            }
+            Path path = Path.of(option);
+            if (option.startsWith("C:\\")) {
                 if (!Files.isDirectory(path)) {
                     inputFiles.add(new File(path.toString()));///может быть повторное добавление одно и того же файла?
                     countFiles++;
@@ -135,8 +174,19 @@ public class UserCommandHandler {
                 }
                 logger.info("{} не является файлом ", path.toAbsolutePath()); /// тут щее надо подумать что может быть итддддд
             }
+//            else {
+//                logger.info("не возможно определить нахождение файла {}, он не будет добавлен к сортировке ", option);
+//            }
+
+            //если указано только имя файла(int.txt), проверяем есть ли он в текущей папке проекта: input files
+
         }
         return countFiles != 0;
+    }
+
+
+    public void defineInputFileDirectory() {
+
     }
 
     private void printInputFilesFromDefaultDir() {
@@ -185,7 +235,7 @@ public class UserCommandHandler {
         }
 
         if (rawInputUserOptions.contains("-o")) {
-            options.add("-o");
+            options.add("-o"); /// тут можно доавбить вызова метода setDirForSortedFiles(); но тогда нужно будет установить дефолтную дирректорию.
             count++;
         }
     }
