@@ -146,21 +146,21 @@ public class FileContentSorter {
     public void writeLineIntoFile(String line, TypeOfLine typeOfLine) {  ///Тут надо походу добавить отдельный метод который создает имя что бы каждый раз не создавать.для каждого
         Path pathToCreatableFile = null;
         StringBuilder namePrefix = new StringBuilder(userCommandHandler.getNamePrefixForSortedFiles());
-
+        createDirectoriesForOutputFiles(directoryForSortedFiles);
         if (typeOfLine.equals(TypeOfLine.STRING)) {
             String fileName = namePrefix.append("strings.txt").toString();
             pathToCreatableFile = directoryForSortedFiles.resolve(fileName);
-            createDirectoriesForOutputFiles(pathToCreatableFile);           // зачем несколько раз проверять , можно один раз вызывать этот метдо и всё и больше не вызывать.А файл сам создатся при записи
+//            createDirectoriesForOutputFiles(pathToCreatableFile);           // зачем несколько раз проверять , можно один раз вызывать этот метдо и всё и больше не вызывать.А файл сам создатся при записи
         }
         if (typeOfLine.equals(TypeOfLine.INTEGER)) {
             String fileName = namePrefix.append("integers.txt").toString();
-            pathToCreatableFile = directoryForSortedFiles.resolve(fileName);
-            createDirectoriesForOutputFiles(pathToCreatableFile);
+            pathToCreatableFile = directoryForSortedFiles.resolve(fileName);  ////может тоже так же вынести 
+//            createDirectoriesForOutputFiles(pathToCreatableFile);
         }
         if (typeOfLine.equals(TypeOfLine.FLOATS)) {
             String fileName = namePrefix.append("floats.txt").toString();
             pathToCreatableFile = directoryForSortedFiles.resolve(fileName);
-            createDirectoriesForOutputFiles(pathToCreatableFile);
+//            createDirectoriesForOutputFiles(pathToCreatableFile);
         }
 
         //и вот это убрать т а в createDirectoriesForOutputFiles добавить создание дефолтной дирректориюю. А убрать т..к потом можно будет что эта переменная будет точно создаани
