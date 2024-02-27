@@ -2,6 +2,7 @@ package ru.naumkin.java.test.sort.file.contents;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import ru.naumkin.java.test.sort.file.contents.enums.StatisticMode;
 
 import java.io.File;
 import java.io.IOException;
@@ -20,6 +21,7 @@ public class UserCommandHandler {
     private List<File> inputFiles;
 
     private Set<String> options;
+    private StatisticMode statisticMode;
 
     private String namePrefixForSortedFiles;
     private Path directoryForSortedFiles;
@@ -34,6 +36,10 @@ public class UserCommandHandler {
 
     public Path getDirectoryForSortedFiles() {
         return directoryForSortedFiles;
+    }
+
+    public String getNamePrefixForSortedFiles() {
+        return namePrefixForSortedFiles;
     }
 
     public UserCommandHandler(String[] args) {
@@ -53,7 +59,7 @@ public class UserCommandHandler {
         } catch (InvalidPathException e) {
             logger.error(e);
         }
-        getNamePrefixForSortedFiles();
+        getNamePrefixForSortedFilesFromLine();
         printAllInformation();
     }
 
@@ -167,12 +173,14 @@ public class UserCommandHandler {
 
         if (rawInputUserOptions.contains("-s")) {
             options.add("-s");
+            statisticMode = StatisticMode.SHORT;
             count++;
         }
 
         if (rawInputUserOptions.contains("-f")) {
             options.remove("-s"); ///// Оставить или убрать?
             options.add("-f");
+            statisticMode = StatisticMode.FULL;
             count++;
         }
 
@@ -251,7 +259,7 @@ public class UserCommandHandler {
 
     //      java -jar util.jar -s -a -o -p sample- in1.txt in2.txt          +
     //      java -jar util.jar -s -a -o -p sample- in1.txt in2.txt          +
-    private void getNamePrefixForSortedFiles() {
+    private void getNamePrefixForSortedFilesFromLine() {
         if (!options.contains("-p")) {
             return;
         }
