@@ -100,20 +100,49 @@ public class UserCommandHandler {
         askUserEnterFilesForSorting();
     }
 
+
+    /**
+     * переделать класс. немного коряво работает логика в плане вывода информации
+     */
     //   C:\1\2\2.1.txt
     private void askUserEnterFilesForSorting() throws InvalidPathException {  //--------RunTimeExeption пробросить и выше словить именно InvalidPathException
         while (true) {
             printInputFilesFromDefaultDir();
-            logger.info(">Введите путь к файлу который хотите добавить к сортировке или имя файла из стандартной директории: ");
+            if (inputFiles.isEmpty()) {
+                logger.info(">Вы не добавили файлы к сортировке или указанные файлы не найдены.Введите путь к файлу который хотите добавить к сортировке или имя файла из стандартной директории: ");
+            }
             String userText = scanner.nextLine();
-            Path path = Paths.get(userText);
-            if (Files.isDirectory(path)) {
-                logger.info("указанный путь ведёт не к файлу");
+//            Path path = Paths.get(userText);
+//            System.out.println("paht= " + path);
+//            if (Files.isDirectory(path)) {
+//                logger.info("указанный путь ведёт не к файлу");
+//                continue;
+//            }
+
+            if (!userText.endsWith(".txt")) {             ///Возможжно это надо вынести в метод т..к уже два раза повторяется
+                logger.info("Не удалось добавить файл {}. Введите имя файла вместе с его расширением - txt. Например: file1.txt", userText);
                 continue;
             }
+            //если указано только имя файла(int.txt), проверяем есть ли он в текущей папке проекта: input files
+            Path pathFileInDefaultDir = inputFileDirectory.resolve(userText);
+            if (Files.exists(pathFileInDefaultDir)) {
+                logger.info("Вы добавили файл для сортировки " + pathFileInDefaultDir);
+                inputFiles.add(new File(pathFileInDefaultDir.toString()));          ////&&&&&
+                continue;
+            }
+            Path path = Path.of(userText);
+            if (userText.startsWith("C:\\")) {
+                if (!Files.isDirectory(path)) {
+                    inputFiles.add(new File(path.toString()));///может быть повторное добавление одно и того же файла?
+                    logger.info("Вы добавили файл для сортировки: " + path);
+                    continue;
+                }
+                logger.info("{} не является файлом ", path.toAbsolutePath()); /// тут щее надо подумать что может быть итддддд
+            }
 
-            inputFiles.add(new File(path.toString()));
-            logger.info(">Вы добавили файл {} в список для сортировки. ", path.toAbsolutePath());
+
+//            inputFiles.add(new File(path.toString()));
+//            logger.info(">Вы добавили файл {} в список для сортировки. ", path.toAbsolutePath());
             while (true) {
                 logger.info(">Введите 1 если хотите добавить еще файл, 0 - если хотите начать сортировку?");
                 String userNumber = scanner.nextLine();

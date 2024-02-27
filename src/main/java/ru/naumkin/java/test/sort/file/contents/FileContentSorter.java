@@ -24,22 +24,16 @@ import static ru.naumkin.java.test.sort.file.contents.FileLineSorterApp.DEFAULT_
 public class FileContentSorter {
     private final Logger logger = LogManager.getLogger(FileContentSorter.class.getName());
 
-    private List<String> listWithSortedStrings;
-    private List<Long> listWithSortedLongs;
-    private List<Double> listWithSortedDoubles;
-    private List<File> filesToSort;
+    private final List<File> filesToSort;
 
-    private List<String> rawStringsFromFiles;
-
-    private UserCommandHandler userCommandHandler; ///////// ?????? убрать?
+    private final UserCommandHandler userCommandHandler; ///////// ?????? убрать?
     private Path directoryForSortedFiles;
 
-    private Map<String, StatisticsRecorder> counters = new HashMap<>();
+    private final Map<String, StatisticsRecorder> counters = new HashMap<>();
 
     private StatisticMode statisticMode;
-    private Counter counter = new Counter(StatisticMode.FULL);
-    //    private Map<File, Long> fileAndPointerPosition = new HashMap<>();  //// в конструкторе инициализвровать
-    private Map<File, Long> fileAndPointerPosition = new TreeMap<>();  //// в конструкторе инициализвровать
+    private final Counter counter = new Counter(StatisticMode.FULL);
+    private final Map<File, Long> fileAndPointerPosition;
 
     /**
      * ВРЕМЕННО ПУСТЬ БУДЕТ ТУТ
@@ -52,9 +46,7 @@ public class FileContentSorter {
 
 
     public FileContentSorter(UserCommandHandler userCommandHandler) {
-        this.listWithSortedStrings = new ArrayList<>();
-        this.listWithSortedLongs = new ArrayList<>();
-        this.listWithSortedDoubles = new ArrayList<>();
+        this.fileAndPointerPosition = new TreeMap<>();
         this.userCommandHandler = userCommandHandler;
         this.filesToSort = userCommandHandler.getInputFiles();
         this.directoryForSortedFiles = userCommandHandler.getDirectoryForSortedFiles(); // Надо убрать т.к мы можем просто брать директорию из userCommandHandlera
@@ -66,27 +58,8 @@ public class FileContentSorter {
      * 2)-s , -
      */
 
-//    public void test(){
-//        userCommandHandler.getDirectoryForSortedFiles();
-//        userCommandHandler.getOptions().
-//    }
     private void run() {
         sortingLinesFromInputFiles();
-//        System.out.println("__________________________");
-//        System.out.println("ЦЕЛЫЕ:");
-//        for (Long l : listWithSortedLongs) {
-//            System.out.println(l);
-//        }
-//        System.out.println("__________________________");
-//        System.out.println("ВЕЩЕСТВЕННЫЕ: ");
-//        for (Double l : listWithSortedDoubles) {
-//            System.out.println(l);
-//        }
-//        System.out.println("__________________________");
-//        System.out.println("Строки:");
-//        for (String l : listWithSortedStrings) {
-//            System.out.println(l);
-//        }
     }
 
 
@@ -110,7 +83,7 @@ public class FileContentSorter {
         fillMapWithPointerPositions();
         int count = 0;
         while (true) {
-            if (fileAndPointerPosition.isEmpty()){
+            if (fileAndPointerPosition.isEmpty()) {
                 break;
             }
             for (Map.Entry<File, Long> entry : fileAndPointerPosition.entrySet()) {
@@ -146,8 +119,8 @@ public class FileContentSorter {
 //        return "";
 //    }
     private void readNextLineFromFile(File file, long pointerPositionInFile) {
-
-        try (RandomAccessFile randomAccessFile = new RandomAccessFile(file.toPath().toString(), "r")) {
+        System.out.println("file = " + file);
+        try (RandomAccessFile randomAccessFile = new RandomAccessFile(file.toPath().toString(), "r")) { //FileNotFoundException появляется
             randomAccessFile.seek(pointerPositionInFile);
             String line;
             if ((line = randomAccessFile.readLine()) == null) {
@@ -155,7 +128,7 @@ public class FileContentSorter {
                 return;
             }
 //             line = new String(randomAccessFile.readLine().getBytes(StandardCharsets.ISO_8859_1), StandardCharsets.UTF_8);
-            String lineUtf8 = new String(line.getBytes(StandardCharsets.ISO_8859_1),StandardCharsets.UTF_8);
+            String lineUtf8 = new String(line.getBytes(StandardCharsets.ISO_8859_1), StandardCharsets.UTF_8);
             //??????? СЮда в метод нужно видимо передавтаь либо весь список либо один элемент
             long pointerPosition = randomAccessFile.getFilePointer();
             setCurrentPointerPositionForFile(file, pointerPosition);
@@ -217,7 +190,7 @@ public class FileContentSorter {
         try (FileWriter writer = new FileWriter(pathToCreatableFile.toString(), true)) {
             writer.write(line);
             writer.append("\n");
-            writer.flush();
+//            writer.flush();
         } catch (IOException e) {
             logger.error(e);
         }
@@ -287,10 +260,10 @@ public class FileContentSorter {
     private void setCurrentPointerPositionForFile(File file, long pointerPosition) {
 
         fileAndPointerPosition.put(file, pointerPosition);///
-        System.out.println("_____________");
-        for (Map.Entry<File, Long> entry : fileAndPointerPosition.entrySet()) {
-            System.out.println(entry.getKey() + " " + entry.getValue());
-        }
+//        System.out.println("_____________");
+//        for (Map.Entry<File, Long> entry : fileAndPointerPosition.entrySet()) {
+//            System.out.println(entry.getKey() + " " + entry.getValue());
+//        }
     }
 
 }
