@@ -94,12 +94,6 @@ public class FileContentSorter {
         }
     }
 
-    //название изменить
-    public void setPositionOfPointerToFile() {
-
-    }
-
-
     private void readNextLineFromFile(File file, long pointerPositionInFile) {
         try (RandomAccessFile randomAccessFile = new RandomAccessFile(file.toPath().toString(), "wr")) { //FileNotFoundException появляется
             randomAccessFile.seek(pointerPositionInFile);
