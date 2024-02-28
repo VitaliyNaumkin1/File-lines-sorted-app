@@ -15,17 +15,16 @@ import java.util.*;
 import static ru.naumkin.java.test.sort.file.contents.FileLineSorterApp.DEFAULT_DIRECTORY;
 
 public class UserCommandHandler {
-    private Scanner scanner;
+    private final Scanner scanner;
     private final Logger logger = LogManager.getLogger(UserCommandHandler.class.getName());
-    private List<String> rawInputUserOptions;
-    private List<File> inputFiles;
-
-    private Set<String> options;
-    private StatisticMode statisticMode;
-
+    private final List<String> rawInputUserOptions;
+    private final Set<String> options;
+    private final List<File> inputFiles;
+    private final Path inputFileDirectory;
     private String namePrefixForSortedFiles;
     private Path directoryForSortedFiles;
-    private Path inputFileDirectory;
+    private StatisticMode statisticMode;
+
 
     public Path getInputFileDirectory() {
         return inputFileDirectory;
@@ -213,11 +212,6 @@ public class UserCommandHandler {
         return countFiles != 0;
     }
 
-
-    public void defineInputFileDirectory() {
-
-    }
-
     private void printInputFilesFromDefaultDir() {
         System.out.println("_______________________________________");
         File[] dir = new File("input files\\").listFiles();
@@ -348,18 +342,22 @@ public class UserCommandHandler {
             }
             //нашли префикс в списке и проверяем не находится ли он на последнем элементе иначе ArrayIndexOutOfBoundsException
             if (i == rawInputUserOptions.size() - 1) {  /// NULLLLL
+                logger.info("вы не указали префикс для файлов,файлы будут без префикса");
+                askUserEnterNamePrefixForSortedFiles();
                 return;
             }
-            //Пользователь указал опцию -p для указания префикса, но не указал имя префикса, а следующий элемент в водимой строке это названия файлов.
+            //Пользователь указал опцию -p для указания префикса, но не указал имя для префикса, а следующий элемент в водимой строке это названия файлов.
             String prefix = rawInputUserOptions.get(i + 1);
             if (prefix.endsWith(".txt") && !prefix.equals(".txt")) {
                 logger.info(">Забыли указать префикс для имени сортированных файлов.");
                 askUserEnterNamePrefixForSortedFiles();
                 return;
             }
+
             try {
-                Path prefixName = Paths.get(prefix);
-                namePrefixForSortedFiles = prefixName.toString();
+//                Path prefixName = Paths.get(prefix);
+//                namePrefixForSortedFiles = prefixName.toString();
+                namePrefixForSortedFiles = prefix;
                 return;
             } catch (RuntimeException e) {
                 logger.error(e);
@@ -376,6 +374,7 @@ public class UserCommandHandler {
             logger.info(">Введите префикс для имен сортированных файлов, или введите {} для того что бы имена файлов были без префикса: ", "\"/no\"");
             String userText = scanner.nextLine();
             if (userText.equals("/no")) {
+                namePrefixForSortedFiles = "";
                 logger.info(">Имена отсортированных файлов будут без префикса!");
                 return;
             }
@@ -385,7 +384,8 @@ public class UserCommandHandler {
                 return;
             } catch (RuntimeException e) {
                 logger.error(e);
-                logger.info(">Не допустимый префикс для имени файлов");
+                logger.info(">Не допустимый префикс для имени файлов, файлы будут без префикса");
+                namePrefixForSortedFiles = "";
             }
         }
     }

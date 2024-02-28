@@ -13,28 +13,14 @@ import java.util.*;
  * ///////////////////////Сменить имя на ProcessManger , a Main   FileLinesSorterApp
  */
 public class FileLineSorterApp {
-    //        private Map<String, Boolean> parameters;
-    Scanner scanner = new Scanner(System.in);
-    //    private List<String> rawInputUserParameters;
-    private List<String> rawInputUserParameters;
-    private List<String> userParameters;
-    private List<File> inputFiles;
-
-    private final Logger logger = LogManager.getLogger(FileLineSorterApp.class.getName());
 
     static final Path DEFAULT_DIRECTORY = Paths.get("input files\\");
 
-    private File defaultDirForSortedFiles;
-    private File dirForSortedFiles;
     FileContentSorter fileContentSorter;
-    private UserCommandHandler userCommandHandler;
+    private final UserCommandHandler userCommandHandler;
 
 
     public FileLineSorterApp(String[] args) {
-        this.rawInputUserParameters = Arrays.asList(args);
-        this.inputFiles = new ArrayList<>();
-        this.defaultDirForSortedFiles = Path.of("input files\\").toFile();
-        this.dirForSortedFiles = defaultDirForSortedFiles;
         this.userCommandHandler = new UserCommandHandler(args);
         this.fileContentSorter = new FileContentSorter(userCommandHandler);
     }
@@ -59,35 +45,6 @@ public class FileLineSorterApp {
      */
     public void start() {
 
-//        try {
-////            userCommandHandler.getFilesForSorting(); /// обработку кинуть в юзер хендлер
-//        } catch (InvalidPathException e) {
-//            e.printStackTrace();
-//            System.err.println("Не верный путь к файлу");
-//            //
-//        }
+
     }
-
-//        userCommandHandler.printChoosingFilesForSort();
-//
-//        logger.info("Желаете добавить файлы к сортировке?");
-//        userCommandHandler.getOptionsFromUserInputLine();
-//        setPathForSortedFiles();
-
-
-//    public boolean isValidPath(String path) {
-//        try {
-//            //Это не файл
-//            if (new File(path).isFile()) {
-//                System.out.println("Это файл");
-//                return false;
-//            }
-//
-//            Paths.get(path);
-//        } catch (InvalidPathException | NullPointerException ex) {
-//            return false;
-//        }
-//        return true;
-//    }
-
 }

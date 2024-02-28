@@ -69,7 +69,7 @@ public class FileContentSorter {
             try (BufferedReader reader = Files.newBufferedReader(path)) {
                 String line;
                 while ((line = reader.readLine()) != null) {
-                    determineTypeOfString(line);
+                    determineTypeOfLine(line);
                 }
             } catch (IOException e) {
                 logger.error(e);
@@ -92,8 +92,6 @@ public class FileContentSorter {
                 readNextLineFromFile(file, pointerPosition);
             }
         }
-
-
     }
 
     //название изменить
@@ -101,26 +99,9 @@ public class FileContentSorter {
 
     }
 
-    public void test() {
 
-    }
-
-    //    private String readNextLineFromFile(File file, long pointerPositionInFile) {
-//        try (RandomAccessFile randomAccessFile = new RandomAccessFile(file, "r")) {
-//            randomAccessFile.seek(pointerPositionInFile);
-//            String line = new String(randomAccessFile.readLine().getBytes(StandardCharsets.ISO_8859_1), StandardCharsets.UTF_8);
-//            //??????? СЮда в метод нужно видимо передавтаь либо весь список либо один элемент
-//            long pointerPosition = randomAccessFile.getFilePointer();
-//            setCurrentPointerPositionForFile(file, pointerPosition);
-//            return line;
-//        } catch (IOException e) {
-//            logger.error(e);
-//        }
-//        return "";
-//    }
     private void readNextLineFromFile(File file, long pointerPositionInFile) {
-        System.out.println("file = " + file);
-        try (RandomAccessFile randomAccessFile = new RandomAccessFile(file.toPath().toString(), "r")) { //FileNotFoundException появляется
+        try (RandomAccessFile randomAccessFile = new RandomAccessFile(file.toPath().toString(), "wr")) { //FileNotFoundException появляется
             randomAccessFile.seek(pointerPositionInFile);
             String line;
             if ((line = randomAccessFile.readLine()) == null) {
@@ -132,7 +113,7 @@ public class FileContentSorter {
             //??????? СЮда в метод нужно видимо передавтаь либо весь список либо один элемент
             long pointerPosition = randomAccessFile.getFilePointer();
             setCurrentPointerPositionForFile(file, pointerPosition);
-            determineTypeOfString(lineUtf8);
+            determineTypeOfLine(lineUtf8);
         } catch (IOException e) {
             e.printStackTrace();
             logger.error(e);
@@ -140,23 +121,24 @@ public class FileContentSorter {
     }
 
 
-    private void determineTypeOfString(String line) {
+    private void determineTypeOfLine(String line) {
         if (NumberUtils.isCreatable(line)) {
             if (Pattern.matches("^-?\\d+$", line)) {
-                writeLineIntoFile(line, TypeOfLine.INTEGER);
+                writeLineInToSortedFile(line, TypeOfLine.INTEGER);
             } else {
-                writeLineIntoFile(line, TypeOfLine.FLOATS);
+                writeLineInToSortedFile(line, TypeOfLine.FLOATS);
             }
         } else {
-            writeLineIntoFile(line, TypeOfLine.STRING);
+            writeLineInToSortedFile(line, TypeOfLine.STRING);
         }
     }
+
 
     /**
      * походу надо добавить то что бы создавались дирректории для файлов еще , надо посмотреть , как это сделать.
      */
 
-    public void writeLineIntoFile(String line, TypeOfLine typeOfLine) {  ///Тут надо походу добавить отдельный метод который создает имя что бы каждый раз не создавать.для каждого
+    public void writeLineInToSortedFile(String line, TypeOfLine typeOfLine) {  ///Тут надо походу добавить отдельный метод который создает имя что бы каждый раз не создавать.для каждого
         Path pathToCreatableFile = null;
         StringBuilder namePrefix = new StringBuilder(userCommandHandler.getNamePrefixForSortedFiles());
         createDirectoriesForOutputFiles(directoryForSortedFiles);
@@ -187,10 +169,16 @@ public class FileContentSorter {
             pathToCreatableFile = DEFAULT_DIRECTORY;
         }
 
-        try (FileWriter writer = new FileWriter(pathToCreatableFile.toString(), true)) {
+//        try (FileWriter writer = new FileWriter(pathToCreatableFile.toString(), true)) {  // надо как то выносить эту штуку
+//            writer.write(line);
+//            writer.append("\n");
+//        } catch (IOException e) {
+//            logger.error(e);
+//        }
+
+        try (FileWriter writer = new FileWriter(pathToCreatableFile.toString(), true)) {  // надо как то выносить эту штуку
             writer.write(line);
             writer.append("\n");
-//            writer.flush();
         } catch (IOException e) {
             logger.error(e);
         }
@@ -258,12 +246,43 @@ public class FileContentSorter {
     }
 
     private void setCurrentPointerPositionForFile(File file, long pointerPosition) {
-
         fileAndPointerPosition.put(file, pointerPosition);///
-//        System.out.println("_____________");
-//        for (Map.Entry<File, Long> entry : fileAndPointerPosition.entrySet()) {
-//            System.out.println(entry.getKey() + " " + entry.getValue());
-//        }
+    }
+
+    public void deletePreviousFilesWithResults() { // можно взять и передавть имя файла в другом методе
+        Path directory = directoryForSortedFiles;
+        StringBuilder namePrefix = new StringBuilder(userCommandHandler.getNamePrefixForSortedFiles());
+        Path filePathSortedIntegers = directory.resolve((namePrefix.append("integers.txt")).toString());
+        Path filePathSortedFloats = directory.resolve((namePrefix.append("floats.txt")).toString());
+        Path filePathSortedStrings = directory.resolve((namePrefix.append("strings.txt")).toString());
+        if (Files.exists(filePathSortedIntegers)) {
+            try {
+                Files.delete(filePathSortedIntegers);
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+        }
+        if (Files.exists(filePathSortedFloats)) {
+            try {
+                Files.delete(filePathSortedFloats);
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+        }
+
+        if (Files.exists(filePathSortedStrings)) {
+            try {
+                Files.delete(filePathSortedStrings);
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+        }
+    }
+
+    public void test2() {
+        if (userCommandHandler.getOptions().contains("-a")) {
+
+        }
     }
 
 }
