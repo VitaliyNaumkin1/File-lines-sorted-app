@@ -2,23 +2,27 @@ package ru.naumkin.java.test.sort.file.contents.statisticrecorder;
 
 import ru.naumkin.java.test.sort.file.contents.enums.TypeOfData;
 
-public class ShortStatisticRecorder   {
+public class ShortStatisticRecorder2 implements AbstractStatisticRecorder {
     protected TypeOfData typeOfData;
     public int countOfElementsWrittenToFile;
-    protected String currentLine;
 
-    public ShortStatisticRecorder(TypeOfData typeOfData) {
+    public ShortStatisticRecorder2(TypeOfData typeOfData) {
         this.countOfElementsWrittenToFile = 0;
         this.typeOfData = typeOfData;
+    }
+
+    @Override
+    public void addToStatistic( String string) {
+        increaseCounter();
     }
 
     public TypeOfData getTypeOfData() {
         return typeOfData;
     }
+
     public void increaseCounter() {
         this.countOfElementsWrittenToFile++;
     }
-
 
     @Override
     public String toString() {

@@ -1,8 +1,6 @@
 package ru.naumkin.java.test.sort.file.contents;
 
-import ru.naumkin.java.test.sort.file.contents.enums.StatisticMode;
-import ru.naumkin.java.test.sort.file.contents.statisticrecorder.ShortStatisticRecorder;
-import ru.naumkin.java.test.sort.file.contents.statisticrecorder.FullStatisticRecorder;
+import ru.naumkin.java.test.sort.file.contents.statisticrecorder.AbstractStatisticRecorder;
 
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -44,20 +42,27 @@ public class FileLineSorterApp {
      * 3)задать путь для файлов исходящих.
      */
     public void start() {
-        List<ShortStatisticRecorder> shortStatisticRecorderList = fileContentSorter.getShortStatisticRecorderList();
-        List<FullStatisticRecorder> fullStatisticRecorderList = fileContentSorter.getFullStatisticRecorderList();
-        StatisticMode statisticMode = fileContentSorter.getStatisticMode();
-        if (statisticMode.equals(StatisticMode.SHORT)) {
-            System.out.println("Короткая статистика: ");
-            System.out.println(shortStatisticRecorderList.size());
-            for (ShortStatisticRecorder recorder : shortStatisticRecorderList) {
-                System.out.println( recorder.toString());
-            }
-        }else {
-            System.out.println("Подробная статистика статистика: ");
-            for (FullStatisticRecorder recorder : fullStatisticRecorderList) {
-                System.out.println(recorder.toString());
-            }
+//        List<ShortStatisticRecorder> shortStatisticRecorderList = fileContentSorter.getShortStatisticRecorderList();
+//        List<FullStatisticRecorder> fullStatisticRecorderList = fileContentSorter.getFullStatisticRecorderList();
+//        StatisticMode statisticMode = fileContentSorter.getStatisticMode();
+//        if (statisticMode.equals(StatisticMode.SHORT)) {
+//            System.out.println("Короткая статистика: ");
+//            System.out.println(shortStatisticRecorderList.size());
+//            for (ShortStatisticRecorder recorder : shortStatisticRecorderList) {
+//                System.out.println( recorder.toString());
+//            }
+//        }else {
+//            System.out.println("Подробная статистика статистика: ");
+//            for (FullStatisticRecorder recorder : fullStatisticRecorderList) {
+//                System.out.println(recorder.toString());
+//            }
+//        }
+        System.out.println("Информация о сортированных файлах: ");
+        List<AbstractStatisticRecorder> recorders = fileContentSorter.getAbstractStatisticRecorderList();
+        for (AbstractStatisticRecorder recorder : recorders) {
+            System.out.println(recorder.toString());
         }
+
+
     }
 }

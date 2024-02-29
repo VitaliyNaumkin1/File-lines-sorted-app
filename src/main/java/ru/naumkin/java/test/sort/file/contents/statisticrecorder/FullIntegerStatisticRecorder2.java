@@ -1,8 +1,7 @@
-package ru.naumkin.java.test.sort.file.contents.statisticrecorder.test;
+package ru.naumkin.java.test.sort.file.contents.statisticrecorder;
 
 import org.apache.commons.lang3.math.NumberUtils;
 import ru.naumkin.java.test.sort.file.contents.enums.TypeOfData;
-import ru.naumkin.java.test.sort.file.contents.statisticrecorder.FullStatisticRecorder;
 
 import java.math.BigDecimal;
 
@@ -13,8 +12,7 @@ public class FullIntegerStatisticRecorder2 implements AbstractStatisticRecorder 
     private BigDecimal average;
     private long countOfElementsWrittenToFile;
     private final TypeOfData typeOfData;
-
-    private String currentLine;
+    boolean isFirstStatisticAdded = false;
 
     public FullIntegerStatisticRecorder2(TypeOfData typeOfData) {
         this.minElement = new BigDecimal(0);
@@ -25,9 +23,14 @@ public class FullIntegerStatisticRecorder2 implements AbstractStatisticRecorder 
     }
 
     @Override
-    public void addToStatistic(TypeOfData typeOfData, String line) {
+    public void addToStatistic(String line) {
         increaseCounter();
         BigDecimal bigDecimal = new BigDecimal(NumberUtils.createBigInteger(line));
+        if (!isFirstStatisticAdded) {
+            minElement = bigDecimal;
+            maxElement = bigDecimal;
+            isFirstStatisticAdded = true;
+        }
         max(bigDecimal);
         min(bigDecimal);
         sum(bigDecimal);
@@ -39,7 +42,7 @@ public class FullIntegerStatisticRecorder2 implements AbstractStatisticRecorder 
     }
 
     private void max(BigDecimal bigDecimal) {
-        maxElement = maxElement.min(bigDecimal);
+        maxElement = maxElement.max(bigDecimal);
     }
 
 
@@ -58,13 +61,12 @@ public class FullIntegerStatisticRecorder2 implements AbstractStatisticRecorder 
     @Override
     public String toString() {
         return "[File data type = " + typeOfData +
-                ", min element =" + minElement +
-                ", max element =" + maxElement +
+                ", min element =" + minElement.toString() +
+                ", max element =" + maxElement.toString() +
                 ", count of elements =" + countOfElementsWrittenToFile +
-                ", sum =" + sum +
-                ", average =" + average + "]";
+                ", sum =" + sum.toString() +
+                ", average =" + average.toString() + "]";
     }
-
 
     @Override
     public TypeOfData getTypeOfData() {
@@ -75,10 +77,4 @@ public class FullIntegerStatisticRecorder2 implements AbstractStatisticRecorder 
     public void increaseCounter() {
         this.countOfElementsWrittenToFile++;
     }
-
-    @Override
-    public void setString(String string) {
-        this.currentLine = string;
-    }
-
 }

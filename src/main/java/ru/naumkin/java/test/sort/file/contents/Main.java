@@ -5,13 +5,6 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-
-
-        if (args.length == 0) {
-            System.out.println(Arrays.toString(args));
-            Scanner scanner = new Scanner(System.in);
-            System.out.println("Введите имя файла");
-        }
         new FileLineSorterApp(args).start();
     }
 }

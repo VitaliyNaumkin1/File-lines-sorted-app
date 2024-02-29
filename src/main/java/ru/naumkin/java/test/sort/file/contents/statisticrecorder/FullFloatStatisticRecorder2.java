@@ -1,10 +1,10 @@
-package ru.naumkin.java.test.sort.file.contents.statisticrecorder.test;
+package ru.naumkin.java.test.sort.file.contents.statisticrecorder;
 
 import org.apache.commons.lang3.math.NumberUtils;
 import ru.naumkin.java.test.sort.file.contents.enums.TypeOfData;
-import ru.naumkin.java.test.sort.file.contents.statisticrecorder.FullStatisticRecorder;
 
 import java.math.BigDecimal;
+import java.math.RoundingMode;
 
 public class FullFloatStatisticRecorder2 implements AbstractStatisticRecorder {
     private BigDecimal minElement;
@@ -14,7 +14,7 @@ public class FullFloatStatisticRecorder2 implements AbstractStatisticRecorder {
     private int countOfElementsWrittenToFile;
     private final TypeOfData typeOfData;
 
-    private String currentLine;
+    private boolean isFirstStatisticAdded = false;
 
     public FullFloatStatisticRecorder2(TypeOfData typeOfData) {
         this.minElement = new BigDecimal(0);
@@ -26,9 +26,14 @@ public class FullFloatStatisticRecorder2 implements AbstractStatisticRecorder {
 
 
     @Override
-    public void addToStatistic(TypeOfData typeOfData, String line) {
+    public void addToStatistic(String line) {
         increaseCounter();
         BigDecimal bigDecimal = BigDecimal.valueOf(NumberUtils.createDouble(line));
+        if (!isFirstStatisticAdded) {
+            minElement = bigDecimal;
+            maxElement = bigDecimal;
+            isFirstStatisticAdded = true;
+        }
         max(bigDecimal);
         min(bigDecimal);
         sum(bigDecimal);
@@ -40,9 +45,8 @@ public class FullFloatStatisticRecorder2 implements AbstractStatisticRecorder {
     }
 
     private void max(BigDecimal bigDecimal) {
-        maxElement = maxElement.min(bigDecimal);
+        maxElement = maxElement.max(bigDecimal);
     }
-
 
     private void sum(BigDecimal bigDecimal) {
         sum = sum.add(bigDecimal);
@@ -50,7 +54,7 @@ public class FullFloatStatisticRecorder2 implements AbstractStatisticRecorder {
 
     private void average() {
         try {
-            average = sum.divide(new BigDecimal(countOfElementsWrittenToFile));
+            average = sum.divide(new BigDecimal(countOfElementsWrittenToFile), 2, RoundingMode.HALF_UP);
         } catch (ArithmeticException e) {
             e.printStackTrace();
         }
@@ -58,12 +62,12 @@ public class FullFloatStatisticRecorder2 implements AbstractStatisticRecorder {
 
     @Override
     public String toString() {
-        return "[File data type = " + typeOfData +
+        return "[File data type = " + typeOfData.toString() +
                 ", min element =" + minElement.toString() +
                 ", max element =" + maxElement +
                 ", count of elements =" + countOfElementsWrittenToFile +
-                ", sum =" + sum +
-                ", average =" + average + "]";
+                ", sum =" + sum.toString() +
+                ", average =" + average.toString() + "]";
     }
 
     @Override
@@ -76,8 +80,4 @@ public class FullFloatStatisticRecorder2 implements AbstractStatisticRecorder {
         this.countOfElementsWrittenToFile++;
     }
 
-    @Override
-    public void setString(String string) {
-        this.currentLine = string;
-    }
 }

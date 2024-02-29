@@ -1,7 +1,5 @@
 package ru.naumkin.java.test.sort.file.contents;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import ru.naumkin.java.test.sort.file.contents.enums.StatisticMode;
 
 import java.io.File;
@@ -16,7 +14,6 @@ import static ru.naumkin.java.test.sort.file.contents.FileLineSorterApp.DEFAULT_
 
 public class UserCommandHandler {
     private final Scanner scanner;
-    private final Logger logger = LogManager.getLogger(UserCommandHandler.class.getName());
     private final List<String> rawInputUserOptions;
     private final Set<String> options;
     private final List<File> inputFiles;
@@ -24,11 +21,6 @@ public class UserCommandHandler {
     private String namePrefixForSortedFiles;
     private Path directoryForSortedFiles;
     private StatisticMode statisticMode;
-
-
-    public Path getInputFileDirectory() {
-        return inputFileDirectory;
-    }
 
     public List<File> getInputFiles() {
         return inputFiles;
@@ -66,7 +58,7 @@ public class UserCommandHandler {
         try {
             getFilesForSorting(); /// наверное зря сюда пробросил обработку
         } catch (InvalidPathException e) {
-            logger.error(e);
+            e.printStackTrace();
         }
         getNamePrefixForSortedFilesFromLine();
         printAllInformation();
@@ -104,12 +96,11 @@ public class UserCommandHandler {
     /**
      * переделать класс. немного коряво работает логика в плане вывода информации
      */
-    //   C:\1\2\2.1.txt
     private void askUserEnterFilesForSorting() throws InvalidPathException {  //--------RunTimeExeption пробросить и выше словить именно InvalidPathException
         while (true) {
             printInputFilesFromDefaultDir();
             if (inputFiles.isEmpty()) {
-                logger.info(">Вы не добавили файлы к сортировке или указанные файлы не найдены.Введите путь к файлу который хотите добавить к сортировке или имя файла из стандартной директории: ");
+                System.out.println(">Вы не добавили файлы к сортировке или указанные файлы не найдены.Введите путь к файлу который хотите добавить к сортировке или имя файла из стандартной директории: ");
             }
             String userText = scanner.nextLine();
 //            Path path = Paths.get(userText);
@@ -120,13 +111,13 @@ public class UserCommandHandler {
 //            }
 
             if (!userText.endsWith(".txt")) {             ///Возможжно это надо вынести в метод т..к уже два раза повторяется
-                logger.info("Не удалось добавить файл {}. Введите имя файла вместе с его расширением - txt. Например: file1.txt", userText);
+                System.out.printf("Не удалось добавить файл %s. Введите имя файла вместе с его расширением - txt. Например: file1.txt\n", userText);
                 continue;
             }
             //если указано только имя файла(int.txt), проверяем есть ли он в текущей папке проекта: input files
             Path pathFileInDefaultDir = inputFileDirectory.resolve(userText);
             if (Files.exists(pathFileInDefaultDir)) {
-                logger.info("Вы добавили файл для сортировки " + pathFileInDefaultDir);
+                System.out.println("Вы добавили файл для сортировки " + pathFileInDefaultDir);
                 inputFiles.add(new File(pathFileInDefaultDir.toString()));          ////&&&&&
                 continue;
             }
@@ -134,17 +125,16 @@ public class UserCommandHandler {
             if (userText.startsWith("C:\\")) {
                 if (!Files.isDirectory(path)) {
                     inputFiles.add(new File(path.toString()));///может быть повторное добавление одно и того же файла?
-                    logger.info("Вы добавили файл для сортировки: " + path);
+                    System.out.println("Вы добавили файл для сортировки: " + path);
                     continue;
                 }
-                logger.info("{} не является файлом ", path.toAbsolutePath()); /// тут щее надо подумать что может быть итддддд
+                System.out.printf("%s не является файлом \n", path.toAbsolutePath()); /// тут щее надо подумать что может быть итддддд
             }
-
 
 //            inputFiles.add(new File(path.toString()));
 //            logger.info(">Вы добавили файл {} в список для сортировки. ", path.toAbsolutePath());
             while (true) {
-                logger.info(">Введите 1 если хотите добавить еще файл, 0 - если хотите начать сортировку?");
+                System.out.println(">Введите 1 если хотите добавить еще файл, 0 - если хотите начать сортировку?");
                 String userNumber = scanner.nextLine();
                 if (!userNumber.equals("0") && !userNumber.equals("1")) {
                     continue;
@@ -196,9 +186,6 @@ public class UserCommandHandler {
         System.out.println("_______________________________________");
     }
 
-    /**
-     * ДОПОЛНЕНИЕ: если указаны две опции для сортировки файлов -s и -f, то выбирается полная сортировка.
-     */
     private void getOptionsFromUserInputLine() {
 
         if (rawInputUserOptions.contains("-a")) {
@@ -253,11 +240,6 @@ public class UserCommandHandler {
                 return;
             }
         }
-
-        /**
-         * МОжет быть такая возомжность что указын параметры -o -a
-         * или -о C:\\1 -a -o C:\\2\2.1
-         */
     }
 
     private void askUserEnterDirForSortedFiles() {
@@ -279,15 +261,6 @@ public class UserCommandHandler {
             }
 
             System.out.printf(">директории %s не существует ", path.toAbsolutePath());
-
-//            try {
-////                Files.createDirectories(path);///////// ------------- нужно ли это?
-////                logger.info(">Отсортированные файлы будут храниться в папке: " + DEFAULT_DIRECTORY.toAbsolutePath());
-//            } catch (IOException | RuntimeException e) {
-//                logger.error(e);
-//                logger.info(">Не удалось создать папку для отсортированных файлов");
-//                askUserEnterDirForSortedFiles(); ///// ------ опасно ли ?
-//            }
         }
     }
 

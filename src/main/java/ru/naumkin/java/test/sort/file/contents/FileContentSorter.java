@@ -2,16 +2,9 @@ package ru.naumkin.java.test.sort.file.contents;
 
 
 import org.apache.commons.lang3.math.NumberUtils;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import ru.naumkin.java.test.sort.file.contents.enums.StatisticMode;
 import ru.naumkin.java.test.sort.file.contents.enums.TypeOfData;
-import ru.naumkin.java.test.sort.file.contents.statisticrecorder.FullNumberTypeShortStatisticRecorder;
-import ru.naumkin.java.test.sort.file.contents.statisticrecorder.FullStatisticRecorder;
-import ru.naumkin.java.test.sort.file.contents.statisticrecorder.FullStringsStatisticRecorder;
-import ru.naumkin.java.test.sort.file.contents.statisticrecorder.ShortStatisticRecorder;
-
-//import ru.naumkin.java.test.sort.file.contents.statisticsrecorder.test.Counter;
+import ru.naumkin.java.test.sort.file.contents.statisticrecorder.*;
 
 import java.io.*;
 import java.nio.charset.StandardCharsets;
@@ -23,8 +16,6 @@ import java.util.regex.Pattern;
 import static ru.naumkin.java.test.sort.file.contents.FileLineSorterApp.DEFAULT_DIRECTORY;
 
 public class FileContentSorter {
-    private final Logger logger = LogManager.getLogger(FileContentSorter.class.getName());
-
     private final List<File> filesToSort;
 
     private final UserCommandHandler userCommandHandler;
@@ -34,21 +25,10 @@ public class FileContentSorter {
     private final StatisticMode statisticMode;
     private final Map<File, Long> fileAndPointerPosition;
 
-    private final List<ShortStatisticRecorder> shortStatisticRecorderList;
-    private final List<FullStatisticRecorder> fullStatisticRecorderList;
+    private final List<AbstractStatisticRecorder> abstractStatisticRecorderList;
 
-    public List<ShortStatisticRecorder> getShortStatisticRecorderList() {
-        return shortStatisticRecorderList;
-    }
-
-    public List<FullStatisticRecorder> getFullStatisticRecorderList() {
-        return fullStatisticRecorderList;
-    }
-
-    
-
-    public StatisticMode getStatisticMode() {
-        return statisticMode;
+    public List<AbstractStatisticRecorder> getAbstractStatisticRecorderList() {
+        return abstractStatisticRecorderList;
     }
 
     public FileContentSorter(UserCommandHandler userCommandHandler) {
@@ -58,11 +38,7 @@ public class FileContentSorter {
         this.directoryForSortedFiles = userCommandHandler.getDirectoryForSortedFiles(); // Надо убрать т.к мы можем просто брать директорию из userCommandHandlera
         this.namePrefix = userCommandHandler.getNamePrefixForSortedFiles();
         this.statisticMode = userCommandHandler.getStatisticMode();
-        this.shortStatisticRecorderList = new ArrayList<>();
-        this.fullStatisticRecorderList = new ArrayList<>();
-
-
-
+        this.abstractStatisticRecorderList = new ArrayList<>();
         run();
     }
 
@@ -71,31 +47,18 @@ public class FileContentSorter {
         sortingLinesFromInputFiles();
     }
 
-//    public void createStatisticsRecorders() {
-//        if (statisticMode.equals(StatisticMode.SHORT)) {
-//            shortStatisticRecorderList.add(new ShortStatisticRecorder(TypeOfData.STRING));
-//            shortStatisticRecorderList.add(new ShortStatisticRecorder(TypeOfData.FLOAT));
-//            shortStatisticRecorderList.add(new ShortStatisticRecorder(TypeOfData.INTEGER));
-//        } else {
-//            fullStatisticRecorderList.add(new FullStringsStatisticRecorder(TypeOfData.STRING));
-//            fullStatisticRecorderList.add(new FullNumberTypeShortStatisticRecorder(TypeOfData.INTEGER));
-//            fullStatisticRecorderList.add(new FullNumberTypeShortStatisticRecorder(TypeOfData.FLOAT));
-//        }
-//    }
-
 
     public void createStatisticsRecorders() {
         if (statisticMode.equals(StatisticMode.SHORT)) {
-            shortStatisticRecorderList.add(new ShortStatisticRecorder(TypeOfData.STRING));
-            shortStatisticRecorderList.add(new ShortStatisticRecorder(TypeOfData.FLOAT));
-            shortStatisticRecorderList.add(new ShortStatisticRecorder(TypeOfData.INTEGER));
+            abstractStatisticRecorderList.add(new ShortStatisticRecorder2(TypeOfData.STRING));
+            abstractStatisticRecorderList.add(new ShortStatisticRecorder2(TypeOfData.FLOAT));
+            abstractStatisticRecorderList.add(new ShortStatisticRecorder2(TypeOfData.INTEGER));
         } else {
-            fullStatisticRecorderList.add(new FullStringsStatisticRecorder(TypeOfData.STRING));
-            fullStatisticRecorderList.add(new FullNumberTypeShortStatisticRecorder(TypeOfData.INTEGER));
-            fullStatisticRecorderList.add(new FullNumberTypeShortStatisticRecorder(TypeOfData.FLOAT));
+            abstractStatisticRecorderList.add(new FullStringsStatisticRecorder2(TypeOfData.STRING));
+            abstractStatisticRecorderList.add(new FullIntegerStatisticRecorder2(TypeOfData.INTEGER));
+            abstractStatisticRecorderList.add(new FullFloatStatisticRecorder2(TypeOfData.FLOAT));
         }
     }
-
 
     private void sortingLinesFromInputFiles() {
         //Для каждого файла в значении хранится положение указателя с какой строки начать дальше будет считывать RandomAccessFile
@@ -138,84 +101,26 @@ public class FileContentSorter {
     private void determineTypeOfLine(String line) {
         if (NumberUtils.isCreatable(line)) {
             if (Pattern.matches("^-?\\d+$", line)) {
-                addToStatistic(TypeOfData.INTEGER, line);
+                addToStatistic2(TypeOfData.INTEGER, line);
                 writeLineInToSortedFile(TypeOfData.INTEGER, line);
             } else {
-                addToStatistic(TypeOfData.FLOAT, line);
+                addToStatistic2(TypeOfData.FLOAT, line);
                 writeLineInToSortedFile(TypeOfData.FLOAT, line);
             }
         } else {
-            addToStatistic(TypeOfData.STRING, line);
+            addToStatistic2(TypeOfData.STRING, line);
             writeLineInToSortedFile(TypeOfData.STRING, line);
         }
     }
 
-
-
-    public void addToStatistic(TypeOfData typeOfData, String line) {
-        if (statisticMode.equals(StatisticMode.SHORT)) {
-            if (typeOfData.equals(TypeOfData.STRING)) {
-                for (ShortStatisticRecorder recorder : shortStatisticRecorderList) {
-                    if (recorder.getTypeOfData().equals(TypeOfData.STRING)) {
-                        recorder.increaseCounter();
-                        return;
-                    }
-                }
-            }
-            if (typeOfData.equals(TypeOfData.INTEGER)) {
-                for (ShortStatisticRecorder recorder : shortStatisticRecorderList) {
-                    if (recorder.getTypeOfData().equals(TypeOfData.INTEGER)) {
-                        recorder.increaseCounter();
-                        return;
-                    }
-                }
-            }
-            if (typeOfData.equals(TypeOfData.FLOAT)) {
-                for (ShortStatisticRecorder recorder : shortStatisticRecorderList) {
-                    if (recorder.getTypeOfData().equals(TypeOfData.FLOAT)) {
-                        recorder.increaseCounter();
-                        return;
-                    }
-                }
-            }
-        } else {
-            if (typeOfData.equals(TypeOfData.STRING)) {
-                for (FullStatisticRecorder recorder : fullStatisticRecorderList) {
-                    if (recorder.getTypeOfData().equals(TypeOfData.STRING)) {
-                        recorder.setString(line);
-                        recorder.addStatistic();
-                        return;
-                    }
-                }
-            }
-            if (typeOfData.equals(TypeOfData.INTEGER)) {
-                for (FullStatisticRecorder recorder : fullStatisticRecorderList) {
-                    try {
-                        if (recorder.getTypeOfData().equals(TypeOfData.INTEGER)) {
-                            recorder.setString(line);
-                            recorder.addStatistic();
-                            return;
-                        }
-                    } catch (RuntimeException e) {
-                        e.getMessage();
-                    }
-                }
-            }
-            if (typeOfData.equals(TypeOfData.FLOAT)) {
-                try {
-                    for (FullStatisticRecorder recorder : fullStatisticRecorderList) {
-                        if (recorder.getTypeOfData().equals(TypeOfData.FLOAT)) {
-                            recorder.setString(line);
-                            recorder.addStatistic();
-                            return;
-                        }
-                    }
-                } catch (RuntimeException e) {
-                    e.getMessage();
-                }
+    public void addToStatistic2(TypeOfData typeOfData, String line) {
+        for (AbstractStatisticRecorder recorder : abstractStatisticRecorderList) {
+            if (recorder.getTypeOfData().equals(typeOfData)) {
+                recorder.addToStatistic(line);
             }
         }
     }
+
 
     /**
      * походу надо добавить то что бы создавались дирректории для файлов еще , надо посмотреть , как это сделать.
@@ -241,7 +146,7 @@ public class FileContentSorter {
         try (FileWriter writer = new FileWriter(pathToCreatableFile.toString(), true)) {
             writer.write(line + "\n");
         } catch (IOException e) {
-            logger.error(e);
+            e.printStackTrace();
         }
     }
 
