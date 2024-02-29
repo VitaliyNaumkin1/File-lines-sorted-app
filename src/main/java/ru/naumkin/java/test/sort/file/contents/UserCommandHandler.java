@@ -264,8 +264,7 @@ public class UserCommandHandler {
         }
     }
 
-    //      java -jar util.jar -s -a -o -p sample- in1.txt in2.txt          +
-    //      java -jar util.jar -s -a -o -p sample- in1.txt in2.txt          +
+
     private void getNamePrefixForSortedFilesFromLine() {
         if (!options.contains("-p")) {
             return;
@@ -289,8 +288,6 @@ public class UserCommandHandler {
             }
 
             try {
-//                Path prefixName = Paths.get(prefix);
-//                namePrefixForSortedFiles = prefixName.toString();
                 namePrefixForSortedFiles = prefix;
                 return;
             } catch (RuntimeException e) {

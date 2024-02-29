@@ -50,13 +50,13 @@ public class FileContentSorter {
 
     public void createStatisticsRecorders() {
         if (statisticMode.equals(StatisticMode.SHORT)) {
-            abstractStatisticRecorderList.add(new ShortStatisticRecorder2(TypeOfData.STRING));
-            abstractStatisticRecorderList.add(new ShortStatisticRecorder2(TypeOfData.FLOAT));
-            abstractStatisticRecorderList.add(new ShortStatisticRecorder2(TypeOfData.INTEGER));
+            abstractStatisticRecorderList.add(new ShortStatisticRecorder(TypeOfData.STRING));
+            abstractStatisticRecorderList.add(new ShortStatisticRecorder(TypeOfData.FLOAT));
+            abstractStatisticRecorderList.add(new ShortStatisticRecorder(TypeOfData.INTEGER));
         } else {
-            abstractStatisticRecorderList.add(new FullStringsStatisticRecorder2(TypeOfData.STRING));
-            abstractStatisticRecorderList.add(new FullIntegerStatisticRecorder2(TypeOfData.INTEGER));
-            abstractStatisticRecorderList.add(new FullFloatStatisticRecorder2(TypeOfData.FLOAT));
+            abstractStatisticRecorderList.add(new FullStringsStatisticRecorder(TypeOfData.STRING));
+            abstractStatisticRecorderList.add(new FullIntegerStatisticRecorder(TypeOfData.INTEGER));
+            abstractStatisticRecorderList.add(new FullFloatStatisticRecorder(TypeOfData.FLOAT));
         }
     }
 

@@ -6,24 +6,23 @@ import ru.naumkin.java.test.sort.file.contents.enums.TypeOfData;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 
-public class FullFloatStatisticRecorder2 implements AbstractStatisticRecorder {
+public class FullFloatStatisticRecorder implements AbstractStatisticRecorder {
+
     private BigDecimal minElement;
     private BigDecimal maxElement;
     private BigDecimal sum;
     private BigDecimal average;
     private int countOfElementsWrittenToFile;
     private final TypeOfData typeOfData;
-
     private boolean isFirstStatisticAdded = false;
 
-    public FullFloatStatisticRecorder2(TypeOfData typeOfData) {
+    public FullFloatStatisticRecorder(TypeOfData typeOfData) {
         this.minElement = new BigDecimal(0);
         this.maxElement = new BigDecimal(0);
         this.average = new BigDecimal(0);
         this.sum = new BigDecimal(0);
         this.typeOfData = typeOfData;
     }
-
 
     @Override
     public void addToStatistic(String line) {
@@ -38,18 +37,6 @@ public class FullFloatStatisticRecorder2 implements AbstractStatisticRecorder {
         min(bigDecimal);
         sum(bigDecimal);
         average();
-    }
-
-    private void min(BigDecimal bigDecimal) {
-        minElement = minElement.min(bigDecimal);
-    }
-
-    private void max(BigDecimal bigDecimal) {
-        maxElement = maxElement.max(bigDecimal);
-    }
-
-    private void sum(BigDecimal bigDecimal) {
-        sum = sum.add(bigDecimal);
     }
 
     private void average() {
@@ -70,12 +57,22 @@ public class FullFloatStatisticRecorder2 implements AbstractStatisticRecorder {
                 ", average =" + average.toString() + "]";
     }
 
-    @Override
+    private void min(BigDecimal bigDecimal) {
+        minElement = minElement.min(bigDecimal);
+    }
+
+    protected void max(BigDecimal bigDecimal) {
+        maxElement = maxElement.max(bigDecimal);
+    }
+
+    protected void sum(BigDecimal bigDecimal) {
+        sum = sum.add(bigDecimal);
+    }
+
     public TypeOfData getTypeOfData() {
         return typeOfData;
     }
 
-    @Override
     public void increaseCounter() {
         this.countOfElementsWrittenToFile++;
     }

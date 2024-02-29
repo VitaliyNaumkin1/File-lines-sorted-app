@@ -4,17 +4,19 @@ import org.apache.commons.lang3.math.NumberUtils;
 import ru.naumkin.java.test.sort.file.contents.enums.TypeOfData;
 
 import java.math.BigDecimal;
+import java.math.RoundingMode;
 
-public class FullIntegerStatisticRecorder2 implements AbstractStatisticRecorder {
+public class FullIntegerStatisticRecorder implements AbstractStatisticRecorder {
     private BigDecimal minElement;
     private BigDecimal maxElement;
     private BigDecimal sum;
     private BigDecimal average;
-    private long countOfElementsWrittenToFile;
+    private int countOfElementsWrittenToFile;
     private final TypeOfData typeOfData;
-    boolean isFirstStatisticAdded = false;
 
-    public FullIntegerStatisticRecorder2(TypeOfData typeOfData) {
+    private boolean isFirstStatisticAdded = false;
+
+    public FullIntegerStatisticRecorder(TypeOfData typeOfData) {
         this.minElement = new BigDecimal(0);
         this.maxElement = new BigDecimal(0);
         this.average = new BigDecimal(0);
@@ -22,10 +24,11 @@ public class FullIntegerStatisticRecorder2 implements AbstractStatisticRecorder 
         this.typeOfData = typeOfData;
     }
 
+
     @Override
     public void addToStatistic(String line) {
         increaseCounter();
-        BigDecimal bigDecimal = new BigDecimal(NumberUtils.createBigInteger(line));
+        BigDecimal bigDecimal = BigDecimal.valueOf(NumberUtils.createDouble(line));
         if (!isFirstStatisticAdded) {
             minElement = bigDecimal;
             maxElement = bigDecimal;
@@ -45,14 +48,13 @@ public class FullIntegerStatisticRecorder2 implements AbstractStatisticRecorder 
         maxElement = maxElement.max(bigDecimal);
     }
 
-
     private void sum(BigDecimal bigDecimal) {
         sum = sum.add(bigDecimal);
     }
 
     private void average() {
         try {
-            average = sum.divide(new BigDecimal(countOfElementsWrittenToFile));
+            average = sum.divide(new BigDecimal(countOfElementsWrittenToFile), 2, RoundingMode.HALF_UP);
         } catch (ArithmeticException e) {
             e.printStackTrace();
         }
@@ -60,9 +62,9 @@ public class FullIntegerStatisticRecorder2 implements AbstractStatisticRecorder 
 
     @Override
     public String toString() {
-        return "[File data type = " + typeOfData +
+        return "[File data type = " + typeOfData.toString() +
                 ", min element =" + minElement.toString() +
-                ", max element =" + maxElement.toString() +
+                ", max element =" + maxElement +
                 ", count of elements =" + countOfElementsWrittenToFile +
                 ", sum =" + sum.toString() +
                 ", average =" + average.toString() + "]";
