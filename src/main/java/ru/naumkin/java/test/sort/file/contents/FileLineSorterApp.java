@@ -1,13 +1,12 @@
 package ru.naumkin.java.test.sort.file.contents;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import ru.naumkin.java.test.sort.file.contents.enums.StatisticMode;
+import ru.naumkin.java.test.sort.file.contents.statisticrecorder.ShortStatisticRecorder;
+import ru.naumkin.java.test.sort.file.contents.statisticrecorder.FullStatisticRecorder;
 
-import java.io.File;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.*;
-
+import java.util.List;
 
 /**
  * ///////////////////////Сменить имя на ProcessManger , a Main   FileLinesSorterApp
@@ -21,6 +20,7 @@ public class FileLineSorterApp {
 
 
     public FileLineSorterApp(String[] args) {
+
         this.userCommandHandler = new UserCommandHandler(args);
         this.fileContentSorter = new FileContentSorter(userCommandHandler);
     }
@@ -44,7 +44,20 @@ public class FileLineSorterApp {
      * 3)задать путь для файлов исходящих.
      */
     public void start() {
-
-
+        List<ShortStatisticRecorder> shortStatisticRecorderList = fileContentSorter.getShortStatisticRecorderList();
+        List<FullStatisticRecorder> fullStatisticRecorderList = fileContentSorter.getFullStatisticRecorderList();
+        StatisticMode statisticMode = fileContentSorter.getStatisticMode();
+        if (statisticMode.equals(StatisticMode.SHORT)) {
+            System.out.println("Короткая статистика: ");
+            System.out.println(shortStatisticRecorderList.size());
+            for (ShortStatisticRecorder recorder : shortStatisticRecorderList) {
+                System.out.println( recorder.toString());
+            }
+        }else {
+            System.out.println("Подробная статистика статистика: ");
+            for (FullStatisticRecorder recorder : fullStatisticRecorderList) {
+                System.out.println(recorder.toString());
+            }
+        }
     }
 }

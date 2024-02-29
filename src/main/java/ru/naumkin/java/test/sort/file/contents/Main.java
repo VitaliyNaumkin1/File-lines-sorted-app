@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
-        ///удалить скорее всего это только
+
         if (args.length == 0) {
             System.out.println(Arrays.toString(args));
             Scanner scanner = new Scanner(System.in);
@@ -98,4 +98,8 @@ public class Main {
  * 4)java -jar util.jar -o in1.txt in2.txt - без пути для файлов , попросить указать путь.
  * 5)java -jar util.jar -o in1.txt in2.txt
  *
+ */
+
+/**
+ * ДОПОЛНЕНИЕ: если указаны две опции для сортировки файлов -s и -f, то выбирается полная сортировка.
  */
