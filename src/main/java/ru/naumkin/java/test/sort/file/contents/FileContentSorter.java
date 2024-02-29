@@ -45,6 +45,8 @@ public class FileContentSorter {
         return fullStatisticRecorderList;
     }
 
+    
+
     public StatisticMode getStatisticMode() {
         return statisticMode;
     }
@@ -58,6 +60,9 @@ public class FileContentSorter {
         this.statisticMode = userCommandHandler.getStatisticMode();
         this.shortStatisticRecorderList = new ArrayList<>();
         this.fullStatisticRecorderList = new ArrayList<>();
+
+
+
         run();
     }
 
@@ -65,6 +70,19 @@ public class FileContentSorter {
         createStatisticsRecorders();
         sortingLinesFromInputFiles();
     }
+
+//    public void createStatisticsRecorders() {
+//        if (statisticMode.equals(StatisticMode.SHORT)) {
+//            shortStatisticRecorderList.add(new ShortStatisticRecorder(TypeOfData.STRING));
+//            shortStatisticRecorderList.add(new ShortStatisticRecorder(TypeOfData.FLOAT));
+//            shortStatisticRecorderList.add(new ShortStatisticRecorder(TypeOfData.INTEGER));
+//        } else {
+//            fullStatisticRecorderList.add(new FullStringsStatisticRecorder(TypeOfData.STRING));
+//            fullStatisticRecorderList.add(new FullNumberTypeShortStatisticRecorder(TypeOfData.INTEGER));
+//            fullStatisticRecorderList.add(new FullNumberTypeShortStatisticRecorder(TypeOfData.FLOAT));
+//        }
+//    }
+
 
     public void createStatisticsRecorders() {
         if (statisticMode.equals(StatisticMode.SHORT)) {
@@ -77,6 +95,7 @@ public class FileContentSorter {
             fullStatisticRecorderList.add(new FullNumberTypeShortStatisticRecorder(TypeOfData.FLOAT));
         }
     }
+
 
     private void sortingLinesFromInputFiles() {
         //Для каждого файла в значении хранится положение указателя с какой строки начать дальше будет считывать RandomAccessFile
@@ -130,6 +149,8 @@ public class FileContentSorter {
             writeLineInToSortedFile(TypeOfData.STRING, line);
         }
     }
+
+
 
     public void addToStatistic(TypeOfData typeOfData, String line) {
         if (statisticMode.equals(StatisticMode.SHORT)) {

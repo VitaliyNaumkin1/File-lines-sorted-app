@@ -1,0 +1,510 @@
+INFO  2024-02-29 04:25:27 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:75) - ________________________________________________________
+INFO  2024-02-29 04:25:27 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:76) - >>>>>Информация о ввёденных условиях программы<<<<<<
+INFO  2024-02-29 04:25:27 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:89) - >Выбранные файлы для сортировки: 
+INFO  2024-02-29 04:25:27 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:91) - [in1.txt]
+INFO  2024-02-29 04:25:27 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:91) - [in2.txt]
+INFO  2024-02-29 04:25:27 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:78) - >Директория для исходящих файлов: c:\1
+INFO  2024-02-29 04:25:27 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:79) - >Префикс имени сортированных файлов: test-
+INFO  2024-02-29 04:25:27 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:80) - >Выбрана статистика для файлов : 
+INFO  2024-02-29 04:25:27 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:81) - ________________________________________________________
+INFO  2024-02-29 04:29:53 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:75) - ________________________________________________________
+INFO  2024-02-29 04:29:53 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:76) - >>>>>Информация о ввёденных условиях программы<<<<<<
+INFO  2024-02-29 04:29:53 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:89) - >Выбранные файлы для сортировки: 
+INFO  2024-02-29 04:29:53 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:91) - [in1.txt]
+INFO  2024-02-29 04:29:53 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:91) - [in2.txt]
+INFO  2024-02-29 04:29:53 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:78) - >Директория для исходящих файлов: c:\1
+INFO  2024-02-29 04:29:53 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:79) - >Префикс имени сортированных файлов: test-
+INFO  2024-02-29 04:29:53 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:80) - >Выбрана статистика для файлов : 
+INFO  2024-02-29 04:29:53 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:81) - ________________________________________________________
+INFO  2024-02-29 04:31:29 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:75) - ________________________________________________________
+INFO  2024-02-29 04:31:29 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:76) - >>>>>Информация о ввёденных условиях программы<<<<<<
+INFO  2024-02-29 04:31:29 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:89) - >Выбранные файлы для сортировки: 
+INFO  2024-02-29 04:31:29 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:91) - [in1.txt]
+INFO  2024-02-29 04:31:29 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:91) - [in2.txt]
+INFO  2024-02-29 04:31:29 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:78) - >Директория для исходящих файлов: c:\1
+INFO  2024-02-29 04:31:29 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:79) - >Префикс имени сортированных файлов: test-
+INFO  2024-02-29 04:31:29 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:80) - >Выбрана статистика для файлов : 
+INFO  2024-02-29 04:31:29 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:81) - ________________________________________________________
+INFO  2024-02-29 04:32:42 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:75) - ________________________________________________________
+INFO  2024-02-29 04:32:42 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:76) - >>>>>Информация о ввёденных условиях программы<<<<<<
+INFO  2024-02-29 04:32:42 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:89) - >Выбранные файлы для сортировки: 
+INFO  2024-02-29 04:32:42 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:91) - [in1.txt]
+INFO  2024-02-29 04:32:42 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:91) - [in2.txt]
+INFO  2024-02-29 04:32:42 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:78) - >Директория для исходящих файлов: c:\1
+INFO  2024-02-29 04:32:42 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:79) - >Префикс имени сортированных файлов: test-
+INFO  2024-02-29 04:32:42 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:80) - >Выбрана статистика для файлов : 
+INFO  2024-02-29 04:32:42 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:81) - ________________________________________________________
+INFO  2024-02-29 04:35:12 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:75) - ________________________________________________________
+INFO  2024-02-29 04:35:12 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:76) - >>>>>Информация о ввёденных условиях программы<<<<<<
+INFO  2024-02-29 04:35:12 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:85) - >Выбранные файлы для сортировки: 
+INFO  2024-02-29 04:35:12 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:87) - [in1.txt] - C:\OTUS\test-java-sort-file-contents\input files\in1.txt
+INFO  2024-02-29 04:35:12 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:87) - [in2.txt] - C:\OTUS\test-java-sort-file-contents\input files\in2.txt
+INFO  2024-02-29 04:35:12 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:78) - >Директория для исходящих файлов: c:\1
+INFO  2024-02-29 04:35:12 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:79) - >Префикс имени сортированных файлов: test-
+INFO  2024-02-29 04:35:12 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:80) - >Выбрана статистика для файлов : 
+INFO  2024-02-29 04:35:12 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:81) - ________________________________________________________
+INFO  2024-02-29 04:38:59 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:349) - >Забыли указать префикс для имени сортированных файлов.
+INFO  2024-02-29 04:38:59 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:371) - >Введите префикс для имен сортированных файлов, или введите "/no" для того что бы имена файлов были без префикса: 
+INFO  2024-02-29 04:39:04 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:375) - >Имена отсортированных файлов будут без префикса!
+INFO  2024-02-29 04:39:04 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:75) - ________________________________________________________
+INFO  2024-02-29 04:39:04 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:76) - >>>>>Информация о ввёденных условиях программы<<<<<<
+INFO  2024-02-29 04:39:04 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:86) - >Выбранные файлы для сортировки: 
+INFO  2024-02-29 04:39:04 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:88) - [in1.txt] - C:\OTUS\test-java-sort-file-contents\input files\in1.txt
+INFO  2024-02-29 04:39:04 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:88) - [in2.txt] - C:\OTUS\test-java-sort-file-contents\input files\in2.txt
+INFO  2024-02-29 04:39:04 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:78) - >Директория для исходящих файлов: c:\1
+INFO  2024-02-29 04:39:04 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:80) - >Префикс имени сортированных файлов: без префикса
+INFO  2024-02-29 04:39:04 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:81) - >Выбрана статистика для файлов : 
+INFO  2024-02-29 04:39:04 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:82) - ________________________________________________________
+INFO  2024-02-29 05:37:48 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:349) - >Забыли указать префикс для имени сортированных файлов.
+INFO  2024-02-29 05:37:48 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:371) - >Введите префикс для имен сортированных файлов, или введите "/no" для того что бы имена файлов были без префикса: 
+INFO  2024-02-29 05:38:00 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:375) - >Имена отсортированных файлов будут без префикса!
+INFO  2024-02-29 05:38:00 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:75) - ________________________________________________________
+INFO  2024-02-29 05:38:00 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:76) - >>>>>Информация о ввёденных условиях программы<<<<<<
+INFO  2024-02-29 05:38:00 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:86) - >Выбранные файлы для сортировки: 
+INFO  2024-02-29 05:38:00 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:88) - [in1.txt] - C:\OTUS\test-java-sort-file-contents\input files\in1.txt
+INFO  2024-02-29 05:38:00 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:88) - [in2.txt] - C:\OTUS\test-java-sort-file-contents\input files\in2.txt
+INFO  2024-02-29 05:38:00 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:78) - >Директория для исходящих файлов: c:\1
+INFO  2024-02-29 05:38:00 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:80) - >Префикс имени сортированных файлов: без префикса
+INFO  2024-02-29 05:38:00 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:81) - >Выбрана статистика для файлов : 
+INFO  2024-02-29 05:38:00 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:82) - ________________________________________________________
+INFO  2024-02-29 06:06:01 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:287) - >для опции -o программа не смогла найти указанную директорию либо вы её не указали
+INFO  2024-02-29 06:06:01 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:301) - >Введите путь для сортированных файлов или "/default" для выбора стандартной директории: 
+INFO  2024-02-29 06:06:06 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:305) - >Отсортированные файлы будут храниться в папке: C:\OTUS\test-java-sort-file-contents\input files
+INFO  2024-02-29 06:06:06 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:349) - >Забыли указать префикс для имени сортированных файлов.
+INFO  2024-02-29 06:06:06 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:371) - >Введите префикс для имен сортированных файлов, или введите "/no" для того что бы имена файлов были без префикса: 
+INFO  2024-02-29 06:06:22 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:375) - >Имена отсортированных файлов будут без префикса!
+INFO  2024-02-29 06:06:22 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:75) - ________________________________________________________
+INFO  2024-02-29 06:06:22 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:76) - >>>>>Информация о ввёденных условиях программы<<<<<<
+INFO  2024-02-29 06:06:22 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:86) - >Выбранные файлы для сортировки: 
+INFO  2024-02-29 06:06:22 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:88) - [in1.txt] - C:\OTUS\test-java-sort-file-contents\input files\in1.txt
+INFO  2024-02-29 06:06:22 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:88) - [in2.txt] - C:\OTUS\test-java-sort-file-contents\input files\in2.txt
+INFO  2024-02-29 06:06:22 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:78) - >Директория для исходящих файлов: C:\OTUS\test-java-sort-file-contents\input files
+INFO  2024-02-29 06:06:22 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:80) - >Префикс имени сортированных файлов: без префикса
+INFO  2024-02-29 06:06:22 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:81) - >Выбрана статистика для файлов : 
+INFO  2024-02-29 06:06:22 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:82) - ________________________________________________________
+INFO  2024-02-29 06:07:44 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:287) - >для опции -o программа не смогла найти указанную директорию либо вы её не указали
+INFO  2024-02-29 06:07:44 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:301) - >Введите путь для сортированных файлов или "/default" для выбора стандартной директории: 
+INFO  2024-02-29 06:07:48 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:305) - >Отсортированные файлы будут храниться в папке: C:\OTUS\test-java-sort-file-contents\input files
+INFO  2024-02-29 06:07:48 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:75) - ________________________________________________________
+INFO  2024-02-29 06:07:48 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:76) - >>>>>Информация о ввёденных условиях программы<<<<<<
+INFO  2024-02-29 06:07:48 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:86) - >Выбранные файлы для сортировки: 
+INFO  2024-02-29 06:07:48 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:88) - [in1.txt] - C:\OTUS\test-java-sort-file-contents\input files\in1.txt
+INFO  2024-02-29 06:07:48 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:88) - [in2.txt] - C:\OTUS\test-java-sort-file-contents\input files\in2.txt
+INFO  2024-02-29 06:07:48 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:78) - >Директория для исходящих файлов: C:\OTUS\test-java-sort-file-contents\input files
+INFO  2024-02-29 06:07:48 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:80) - >Префикс имени сортированных файлов: -sample
+INFO  2024-02-29 06:07:48 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:81) - >Выбрана статистика для файлов : 
+INFO  2024-02-29 06:07:48 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:82) - ________________________________________________________
+INFO  2024-02-29 06:08:21 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:287) - >для опции -o программа не смогла найти указанную директорию либо вы её не указали
+INFO  2024-02-29 06:08:21 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:301) - >Введите путь для сортированных файлов или "/default" для выбора стандартной директории: 
+INFO  2024-02-29 06:08:24 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:305) - >Отсортированные файлы будут храниться в папке: C:\OTUS\test-java-sort-file-contents\input files
+INFO  2024-02-29 06:08:24 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:75) - ________________________________________________________
+INFO  2024-02-29 06:08:24 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:76) - >>>>>Информация о ввёденных условиях программы<<<<<<
+INFO  2024-02-29 06:08:24 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:86) - >Выбранные файлы для сортировки: 
+INFO  2024-02-29 06:08:24 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:88) - [in1.txt] - C:\OTUS\test-java-sort-file-contents\input files\in1.txt
+INFO  2024-02-29 06:08:24 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:88) - [in2.txt] - C:\OTUS\test-java-sort-file-contents\input files\in2.txt
+INFO  2024-02-29 06:08:24 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:78) - >Директория для исходящих файлов: C:\OTUS\test-java-sort-file-contents\input files
+INFO  2024-02-29 06:08:24 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:80) - >Префикс имени сортированных файлов: -sample
+INFO  2024-02-29 06:08:24 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:81) - >Выбрана статистика для файлов : 
+INFO  2024-02-29 06:08:24 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:82) - ________________________________________________________
+INFO  2024-02-29 06:10:31 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:287) - >для опции -o программа не смогла найти указанную директорию либо вы её не указали
+INFO  2024-02-29 06:10:31 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:301) - >Введите путь для сортированных файлов или "/default" для выбора стандартной директории: 
+INFO  2024-02-29 06:10:40 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:305) - >Отсортированные файлы будут храниться в папке: C:\OTUS\test-java-sort-file-contents\input files
+INFO  2024-02-29 06:10:40 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:75) - ________________________________________________________
+INFO  2024-02-29 06:10:40 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:76) - >>>>>Информация о ввёденных условиях программы<<<<<<
+INFO  2024-02-29 06:10:40 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:86) - >Выбранные файлы для сортировки: 
+INFO  2024-02-29 06:10:40 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:88) - [in1.txt] - C:\OTUS\test-java-sort-file-contents\input files\in1.txt
+INFO  2024-02-29 06:10:40 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:88) - [in2.txt] - C:\OTUS\test-java-sort-file-contents\input files\in2.txt
+INFO  2024-02-29 06:10:40 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:78) - >Директория для исходящих файлов: C:\OTUS\test-java-sort-file-contents\input files
+INFO  2024-02-29 06:10:40 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:80) - >Префикс имени сортированных файлов: -sample
+INFO  2024-02-29 06:10:40 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:81) - >Выбрана статистика для файлов : 
+INFO  2024-02-29 06:10:40 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:82) - ________________________________________________________
+INFO  2024-02-29 06:11:21 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:287) - >для опции -o программа не смогла найти указанную директорию либо вы её не указали
+INFO  2024-02-29 06:11:21 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:301) - >Введите путь для сортированных файлов или "/default" для выбора стандартной директории: 
+INFO  2024-02-29 06:11:25 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:305) - >Отсортированные файлы будут храниться в папке: C:\OTUS\test-java-sort-file-contents\input files
+INFO  2024-02-29 06:11:25 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:75) - ________________________________________________________
+INFO  2024-02-29 06:11:25 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:76) - >>>>>Информация о ввёденных условиях программы<<<<<<
+INFO  2024-02-29 06:11:25 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:86) - >Выбранные файлы для сортировки: 
+INFO  2024-02-29 06:11:25 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:88) - [in1.txt] - C:\OTUS\test-java-sort-file-contents\input files\in1.txt
+INFO  2024-02-29 06:11:25 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:88) - [in2.txt] - C:\OTUS\test-java-sort-file-contents\input files\in2.txt
+INFO  2024-02-29 06:11:25 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:78) - >Директория для исходящих файлов: C:\OTUS\test-java-sort-file-contents\input files
+INFO  2024-02-29 06:11:25 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:80) - >Префикс имени сортированных файлов: -sample
+INFO  2024-02-29 06:11:25 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:81) - >Выбрана статистика для файлов : 
+INFO  2024-02-29 06:11:25 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:82) - ________________________________________________________
+INFO  2024-02-29 06:12:52 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:287) - >для опции -o программа не смогла найти указанную директорию либо вы её не указали
+INFO  2024-02-29 06:12:52 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:301) - >Введите путь для сортированных файлов или "/default" для выбора стандартной директории: 
+INFO  2024-02-29 06:12:56 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:305) - >Отсортированные файлы будут храниться в папке: C:\OTUS\test-java-sort-file-contents\input files
+INFO  2024-02-29 06:12:56 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:75) - ________________________________________________________
+INFO  2024-02-29 06:12:56 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:76) - >>>>>Информация о ввёденных условиях программы<<<<<<
+INFO  2024-02-29 06:12:56 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:86) - >Выбранные файлы для сортировки: 
+INFO  2024-02-29 06:12:56 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:88) - [in1.txt] - C:\OTUS\test-java-sort-file-contents\input files\in1.txt
+INFO  2024-02-29 06:12:56 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:88) - [in2.txt] - C:\OTUS\test-java-sort-file-contents\input files\in2.txt
+INFO  2024-02-29 06:12:56 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:78) - >Директория для исходящих файлов: C:\OTUS\test-java-sort-file-contents\input files
+INFO  2024-02-29 06:12:56 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:80) - >Префикс имени сортированных файлов: -sample
+INFO  2024-02-29 06:12:56 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:81) - >Выбрана статистика для файлов : 
+INFO  2024-02-29 06:12:56 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:82) - ________________________________________________________
+INFO  2024-02-29 06:19:30 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:287) - >для опции -o программа не смогла найти указанную директорию либо вы её не указали
+INFO  2024-02-29 06:19:30 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:301) - >Введите путь для сортированных файлов или "/default" для выбора стандартной директории: 
+INFO  2024-02-29 06:19:34 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:305) - >Отсортированные файлы будут храниться в папке: C:\OTUS\test-java-sort-file-contents\input files
+INFO  2024-02-29 06:19:34 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:75) - ________________________________________________________
+INFO  2024-02-29 06:19:34 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:76) - >>>>>Информация о ввёденных условиях программы<<<<<<
+INFO  2024-02-29 06:19:34 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:86) - >Выбранные файлы для сортировки: 
+INFO  2024-02-29 06:19:34 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:88) - [in1.txt] - C:\OTUS\test-java-sort-file-contents\input files\in1.txt
+INFO  2024-02-29 06:19:34 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:88) - [in2.txt] - C:\OTUS\test-java-sort-file-contents\input files\in2.txt
+INFO  2024-02-29 06:19:34 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:78) - >Директория для исходящих файлов: C:\OTUS\test-java-sort-file-contents\input files
+INFO  2024-02-29 06:19:34 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:80) - >Префикс имени сортированных файлов: -sample
+INFO  2024-02-29 06:19:34 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:81) - >Выбрана статистика для файлов : 
+INFO  2024-02-29 06:19:34 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:82) - ________________________________________________________
+INFO  2024-02-29 06:45:12 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:287) - >для опции -o программа не смогла найти указанную директорию либо вы её не указали
+INFO  2024-02-29 06:45:12 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:301) - >Введите путь для сортированных файлов или "/default" для выбора стандартной директории: 
+INFO  2024-02-29 06:45:15 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:305) - >Отсортированные файлы будут храниться в папке: C:\OTUS\test-java-sort-file-contents\input files
+INFO  2024-02-29 06:45:15 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:75) - ________________________________________________________
+INFO  2024-02-29 06:45:15 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:76) - >>>>>Информация о ввёденных условиях программы<<<<<<
+INFO  2024-02-29 06:45:15 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:86) - >Выбранные файлы для сортировки: 
+INFO  2024-02-29 06:45:15 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:88) - [in1.txt] - C:\OTUS\test-java-sort-file-contents\input files\in1.txt
+INFO  2024-02-29 06:45:15 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:88) - [in2.txt] - C:\OTUS\test-java-sort-file-contents\input files\in2.txt
+INFO  2024-02-29 06:45:15 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:78) - >Директория для исходящих файлов: C:\OTUS\test-java-sort-file-contents\input files
+INFO  2024-02-29 06:45:15 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:80) - >Префикс имени сортированных файлов: -sample
+INFO  2024-02-29 06:45:15 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:81) - >Выбрана статистика для файлов : 
+INFO  2024-02-29 06:45:15 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:82) - ________________________________________________________
+INFO  2024-02-29 06:45:26 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:287) - >для опции -o программа не смогла найти указанную директорию либо вы её не указали
+INFO  2024-02-29 06:45:26 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:301) - >Введите путь для сортированных файлов или "/default" для выбора стандартной директории: 
+INFO  2024-02-29 06:45:31 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:305) - >Отсортированные файлы будут храниться в папке: C:\OTUS\test-java-sort-file-contents\input files
+INFO  2024-02-29 06:45:31 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:75) - ________________________________________________________
+INFO  2024-02-29 06:45:31 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:76) - >>>>>Информация о ввёденных условиях программы<<<<<<
+INFO  2024-02-29 06:45:31 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:86) - >Выбранные файлы для сортировки: 
+INFO  2024-02-29 06:45:31 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:88) - [in1.txt] - C:\OTUS\test-java-sort-file-contents\input files\in1.txt
+INFO  2024-02-29 06:45:31 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:88) - [in2.txt] - C:\OTUS\test-java-sort-file-contents\input files\in2.txt
+INFO  2024-02-29 06:45:31 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:78) - >Директория для исходящих файлов: C:\OTUS\test-java-sort-file-contents\input files
+INFO  2024-02-29 06:45:31 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:80) - >Префикс имени сортированных файлов: -sample
+INFO  2024-02-29 06:45:31 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:81) - >Выбрана статистика для файлов : 
+INFO  2024-02-29 06:45:31 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:82) - ________________________________________________________
+INFO  2024-02-29 06:52:13 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:287) - >для опции -o программа не смогла найти указанную директорию либо вы её не указали
+INFO  2024-02-29 06:52:13 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:301) - >Введите путь для сортированных файлов или "/default" для выбора стандартной директории: 
+INFO  2024-02-29 06:52:20 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:305) - >Отсортированные файлы будут храниться в папке: C:\OTUS\test-java-sort-file-contents\input files
+INFO  2024-02-29 06:52:20 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:75) - ________________________________________________________
+INFO  2024-02-29 06:52:20 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:76) - >>>>>Информация о ввёденных условиях программы<<<<<<
+INFO  2024-02-29 06:52:20 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:86) - >Выбранные файлы для сортировки: 
+INFO  2024-02-29 06:52:20 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:88) - [in1.txt] - C:\OTUS\test-java-sort-file-contents\input files\in1.txt
+INFO  2024-02-29 06:52:20 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:88) - [in2.txt] - C:\OTUS\test-java-sort-file-contents\input files\in2.txt
+INFO  2024-02-29 06:52:20 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:78) - >Директория для исходящих файлов: C:\OTUS\test-java-sort-file-contents\input files
+INFO  2024-02-29 06:52:20 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:80) - >Префикс имени сортированных файлов: -sample
+INFO  2024-02-29 06:52:20 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:81) - >Выбрана статистика для файлов : 
+INFO  2024-02-29 06:52:20 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:82) - ________________________________________________________
+INFO  2024-02-29 06:52:24 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:287) - >для опции -o программа не смогла найти указанную директорию либо вы её не указали
+INFO  2024-02-29 06:52:24 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:301) - >Введите путь для сортированных файлов или "/default" для выбора стандартной директории: 
+INFO  2024-02-29 06:52:28 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:305) - >Отсортированные файлы будут храниться в папке: C:\OTUS\test-java-sort-file-contents\input files
+INFO  2024-02-29 06:52:28 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:75) - ________________________________________________________
+INFO  2024-02-29 06:52:28 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:76) - >>>>>Информация о ввёденных условиях программы<<<<<<
+INFO  2024-02-29 06:52:28 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:86) - >Выбранные файлы для сортировки: 
+INFO  2024-02-29 06:52:28 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:88) - [in1.txt] - C:\OTUS\test-java-sort-file-contents\input files\in1.txt
+INFO  2024-02-29 06:52:28 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:88) - [in2.txt] - C:\OTUS\test-java-sort-file-contents\input files\in2.txt
+INFO  2024-02-29 06:52:28 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:78) - >Директория для исходящих файлов: C:\OTUS\test-java-sort-file-contents\input files
+INFO  2024-02-29 06:52:28 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:80) - >Префикс имени сортированных файлов: -sample
+INFO  2024-02-29 06:52:28 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:81) - >Выбрана статистика для файлов : 
+INFO  2024-02-29 06:52:28 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:82) - ________________________________________________________
+INFO  2024-02-29 06:52:49 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:287) - >для опции -o программа не смогла найти указанную директорию либо вы её не указали
+INFO  2024-02-29 06:52:49 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:301) - >Введите путь для сортированных файлов или "/default" для выбора стандартной директории: 
+INFO  2024-02-29 06:52:53 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:305) - >Отсортированные файлы будут храниться в папке: C:\OTUS\test-java-sort-file-contents\input files
+INFO  2024-02-29 06:52:53 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:75) - ________________________________________________________
+INFO  2024-02-29 06:52:53 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:76) - >>>>>Информация о ввёденных условиях программы<<<<<<
+INFO  2024-02-29 06:52:53 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:86) - >Выбранные файлы для сортировки: 
+INFO  2024-02-29 06:52:53 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:88) - [in1.txt] - C:\OTUS\test-java-sort-file-contents\input files\in1.txt
+INFO  2024-02-29 06:52:53 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:88) - [in2.txt] - C:\OTUS\test-java-sort-file-contents\input files\in2.txt
+INFO  2024-02-29 06:52:53 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:78) - >Директория для исходящих файлов: C:\OTUS\test-java-sort-file-contents\input files
+INFO  2024-02-29 06:52:53 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:80) - >Префикс имени сортированных файлов: -sample
+INFO  2024-02-29 06:52:53 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:81) - >Выбрана статистика для файлов : 
+INFO  2024-02-29 06:52:53 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:82) - ________________________________________________________
+ERROR 2024-02-29 06:52:53 [main] ru.naumkin.java.test.sort.file.contents.FileContentSorter (FileContentSorter.java:90) - java.io.IOException: Отказано в доступе
+ERROR 2024-02-29 06:52:53 [main] ru.naumkin.java.test.sort.file.contents.FileContentSorter (FileContentSorter.java:90) - java.io.IOException: Отказано в доступе
+INFO  2024-02-29 06:53:34 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:287) - >для опции -o программа не смогла найти указанную директорию либо вы её не указали
+INFO  2024-02-29 06:53:34 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:301) - >Введите путь для сортированных файлов или "/default" для выбора стандартной директории: 
+INFO  2024-02-29 06:53:38 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:305) - >Отсортированные файлы будут храниться в папке: C:\OTUS\test-java-sort-file-contents\input files
+INFO  2024-02-29 06:53:38 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:75) - ________________________________________________________
+INFO  2024-02-29 06:53:38 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:76) - >>>>>Информация о ввёденных условиях программы<<<<<<
+INFO  2024-02-29 06:53:38 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:86) - >Выбранные файлы для сортировки: 
+INFO  2024-02-29 06:53:38 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:88) - [in1.txt] - C:\OTUS\test-java-sort-file-contents\input files\in1.txt
+INFO  2024-02-29 06:53:38 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:88) - [in2.txt] - C:\OTUS\test-java-sort-file-contents\input files\in2.txt
+INFO  2024-02-29 06:53:38 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:78) - >Директория для исходящих файлов: C:\OTUS\test-java-sort-file-contents\input files
+INFO  2024-02-29 06:53:38 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:80) - >Префикс имени сортированных файлов: -sample
+INFO  2024-02-29 06:53:38 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:81) - >Выбрана статистика для файлов : 
+INFO  2024-02-29 06:53:38 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:82) - ________________________________________________________
+INFO  2024-02-29 06:53:46 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:287) - >для опции -o программа не смогла найти указанную директорию либо вы её не указали
+INFO  2024-02-29 06:53:46 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:301) - >Введите путь для сортированных файлов или "/default" для выбора стандартной директории: 
+INFO  2024-02-29 06:53:53 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:305) - >Отсортированные файлы будут храниться в папке: C:\OTUS\test-java-sort-file-contents\input files
+INFO  2024-02-29 06:53:53 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:75) - ________________________________________________________
+INFO  2024-02-29 06:53:53 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:76) - >>>>>Информация о ввёденных условиях программы<<<<<<
+INFO  2024-02-29 06:53:53 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:86) - >Выбранные файлы для сортировки: 
+INFO  2024-02-29 06:53:53 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:88) - [in1.txt] - C:\OTUS\test-java-sort-file-contents\input files\in1.txt
+INFO  2024-02-29 06:53:53 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:88) - [in2.txt] - C:\OTUS\test-java-sort-file-contents\input files\in2.txt
+INFO  2024-02-29 06:53:53 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:78) - >Директория для исходящих файлов: C:\OTUS\test-java-sort-file-contents\input files
+INFO  2024-02-29 06:53:53 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:80) - >Префикс имени сортированных файлов: -sample
+INFO  2024-02-29 06:53:53 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:81) - >Выбрана статистика для файлов : 
+INFO  2024-02-29 06:53:53 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:82) - ________________________________________________________
+INFO  2024-02-29 06:54:03 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:287) - >для опции -o программа не смогла найти указанную директорию либо вы её не указали
+INFO  2024-02-29 06:54:03 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:301) - >Введите путь для сортированных файлов или "/default" для выбора стандартной директории: 
+INFO  2024-02-29 06:54:06 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:305) - >Отсортированные файлы будут храниться в папке: C:\OTUS\test-java-sort-file-contents\input files
+INFO  2024-02-29 06:54:06 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:75) - ________________________________________________________
+INFO  2024-02-29 06:54:06 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:76) - >>>>>Информация о ввёденных условиях программы<<<<<<
+INFO  2024-02-29 06:54:06 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:86) - >Выбранные файлы для сортировки: 
+INFO  2024-02-29 06:54:06 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:88) - [in1.txt] - C:\OTUS\test-java-sort-file-contents\input files\in1.txt
+INFO  2024-02-29 06:54:06 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:88) - [in2.txt] - C:\OTUS\test-java-sort-file-contents\input files\in2.txt
+INFO  2024-02-29 06:54:06 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:78) - >Директория для исходящих файлов: C:\OTUS\test-java-sort-file-contents\input files
+INFO  2024-02-29 06:54:06 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:80) - >Префикс имени сортированных файлов: -sample
+INFO  2024-02-29 06:54:06 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:81) - >Выбрана статистика для файлов : 
+INFO  2024-02-29 06:54:06 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:82) - ________________________________________________________
+INFO  2024-02-29 07:18:12 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:287) - >для опции -o программа не смогла найти указанную директорию либо вы её не указали
+INFO  2024-02-29 07:18:12 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:301) - >Введите путь для сортированных файлов или "/default" для выбора стандартной директории: 
+INFO  2024-02-29 07:18:20 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:305) - >Отсортированные файлы будут храниться в папке: C:\OTUS\test-java-sort-file-contents\input files
+INFO  2024-02-29 07:18:20 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:75) - ________________________________________________________
+INFO  2024-02-29 07:18:20 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:76) - >>>>>Информация о ввёденных условиях программы<<<<<<
+INFO  2024-02-29 07:18:20 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:86) - >Выбранные файлы для сортировки: 
+INFO  2024-02-29 07:18:20 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:88) - [in1.txt] - C:\OTUS\test-java-sort-file-contents\input files\in1.txt
+INFO  2024-02-29 07:18:20 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:88) - [in2.txt] - C:\OTUS\test-java-sort-file-contents\input files\in2.txt
+INFO  2024-02-29 07:18:20 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:78) - >Директория для исходящих файлов: C:\OTUS\test-java-sort-file-contents\input files
+INFO  2024-02-29 07:18:20 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:80) - >Префикс имени сортированных файлов: -sample
+INFO  2024-02-29 07:18:20 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:81) - >Выбрана статистика для файлов : 
+INFO  2024-02-29 07:18:20 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:82) - ________________________________________________________
+INFO  2024-02-29 07:18:34 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:287) - >для опции -o программа не смогла найти указанную директорию либо вы её не указали
+INFO  2024-02-29 07:18:34 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:301) - >Введите путь для сортированных файлов или "/default" для выбора стандартной директории: 
+INFO  2024-02-29 07:18:38 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:305) - >Отсортированные файлы будут храниться в папке: C:\OTUS\test-java-sort-file-contents\input files
+INFO  2024-02-29 07:18:38 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:75) - ________________________________________________________
+INFO  2024-02-29 07:18:38 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:76) - >>>>>Информация о ввёденных условиях программы<<<<<<
+INFO  2024-02-29 07:18:38 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:86) - >Выбранные файлы для сортировки: 
+INFO  2024-02-29 07:18:38 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:88) - [in1.txt] - C:\OTUS\test-java-sort-file-contents\input files\in1.txt
+INFO  2024-02-29 07:18:38 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:88) - [in2.txt] - C:\OTUS\test-java-sort-file-contents\input files\in2.txt
+INFO  2024-02-29 07:18:38 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:78) - >Директория для исходящих файлов: C:\OTUS\test-java-sort-file-contents\input files
+INFO  2024-02-29 07:18:38 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:80) - >Префикс имени сортированных файлов: -sample
+INFO  2024-02-29 07:18:38 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:81) - >Выбрана статистика для файлов : 
+INFO  2024-02-29 07:18:38 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:82) - ________________________________________________________
+INFO  2024-02-29 07:22:17 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:287) - >для опции -o программа не смогла найти указанную директорию либо вы её не указали
+INFO  2024-02-29 07:22:17 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:301) - >Введите путь для сортированных файлов или "/default" для выбора стандартной директории: 
+INFO  2024-02-29 07:22:20 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:305) - >Отсортированные файлы будут храниться в папке: C:\OTUS\test-java-sort-file-contents\input files
+INFO  2024-02-29 07:22:20 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:75) - ________________________________________________________
+INFO  2024-02-29 07:22:20 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:76) - >>>>>Информация о ввёденных условиях программы<<<<<<
+INFO  2024-02-29 07:22:20 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:86) - >Выбранные файлы для сортировки: 
+INFO  2024-02-29 07:22:20 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:88) - [in1.txt] - C:\OTUS\test-java-sort-file-contents\input files\in1.txt
+INFO  2024-02-29 07:22:20 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:88) - [in2.txt] - C:\OTUS\test-java-sort-file-contents\input files\in2.txt
+INFO  2024-02-29 07:22:20 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:78) - >Директория для исходящих файлов: C:\OTUS\test-java-sort-file-contents\input files
+INFO  2024-02-29 07:22:20 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:80) - >Префикс имени сортированных файлов: -sample
+INFO  2024-02-29 07:22:20 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:81) - >Выбрана статистика для файлов : 
+INFO  2024-02-29 07:22:20 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:82) - ________________________________________________________
+INFO  2024-02-29 07:23:47 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:287) - >для опции -o программа не смогла найти указанную директорию либо вы её не указали
+INFO  2024-02-29 07:23:47 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:301) - >Введите путь для сортированных файлов или "/default" для выбора стандартной директории: 
+INFO  2024-02-29 07:23:50 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:305) - >Отсортированные файлы будут храниться в папке: C:\OTUS\test-java-sort-file-contents\input files
+INFO  2024-02-29 07:23:50 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:75) - ________________________________________________________
+INFO  2024-02-29 07:23:50 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:76) - >>>>>Информация о ввёденных условиях программы<<<<<<
+INFO  2024-02-29 07:23:50 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:86) - >Выбранные файлы для сортировки: 
+INFO  2024-02-29 07:23:50 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:88) - [in1.txt] - C:\OTUS\test-java-sort-file-contents\input files\in1.txt
+INFO  2024-02-29 07:23:50 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:88) - [in2.txt] - C:\OTUS\test-java-sort-file-contents\input files\in2.txt
+INFO  2024-02-29 07:23:50 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:78) - >Директория для исходящих файлов: C:\OTUS\test-java-sort-file-contents\input files
+INFO  2024-02-29 07:23:50 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:80) - >Префикс имени сортированных файлов: -sample
+INFO  2024-02-29 07:23:50 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:81) - >Выбрана статистика для файлов : 
+INFO  2024-02-29 07:23:50 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:82) - ________________________________________________________
+INFO  2024-02-29 07:24:35 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:287) - >для опции -o программа не смогла найти указанную директорию либо вы её не указали
+INFO  2024-02-29 07:24:35 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:301) - >Введите путь для сортированных файлов или "/default" для выбора стандартной директории: 
+INFO  2024-02-29 07:24:38 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:305) - >Отсортированные файлы будут храниться в папке: C:\OTUS\test-java-sort-file-contents\input files
+INFO  2024-02-29 07:24:38 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:75) - ________________________________________________________
+INFO  2024-02-29 07:24:38 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:76) - >>>>>Информация о ввёденных условиях программы<<<<<<
+INFO  2024-02-29 07:24:38 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:86) - >Выбранные файлы для сортировки: 
+INFO  2024-02-29 07:24:38 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:88) - [in1.txt] - C:\OTUS\test-java-sort-file-contents\input files\in1.txt
+INFO  2024-02-29 07:24:38 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:88) - [in2.txt] - C:\OTUS\test-java-sort-file-contents\input files\in2.txt
+INFO  2024-02-29 07:24:38 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:78) - >Директория для исходящих файлов: C:\OTUS\test-java-sort-file-contents\input files
+INFO  2024-02-29 07:24:38 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:80) - >Префикс имени сортированных файлов: -sample
+INFO  2024-02-29 07:24:38 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:81) - >Выбрана статистика для файлов : 
+INFO  2024-02-29 07:24:38 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:82) - ________________________________________________________
+INFO  2024-02-29 07:39:27 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:287) - >для опции -o программа не смогла найти указанную директорию либо вы её не указали
+INFO  2024-02-29 07:39:27 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:301) - >Введите путь для сортированных файлов или "/default" для выбора стандартной директории: 
+INFO  2024-02-29 07:39:30 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:305) - >Отсортированные файлы будут храниться в папке: C:\OTUS\test-java-sort-file-contents\input files
+INFO  2024-02-29 07:39:30 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:75) - ________________________________________________________
+INFO  2024-02-29 07:39:30 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:76) - >>>>>Информация о ввёденных условиях программы<<<<<<
+INFO  2024-02-29 07:39:30 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:86) - >Выбранные файлы для сортировки: 
+INFO  2024-02-29 07:39:30 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:88) - [in1.txt] - C:\OTUS\test-java-sort-file-contents\input files\in1.txt
+INFO  2024-02-29 07:39:30 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:88) - [in2.txt] - C:\OTUS\test-java-sort-file-contents\input files\in2.txt
+INFO  2024-02-29 07:39:30 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:78) - >Директория для исходящих файлов: C:\OTUS\test-java-sort-file-contents\input files
+INFO  2024-02-29 07:39:30 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:80) - >Префикс имени сортированных файлов: -sample
+INFO  2024-02-29 07:39:30 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:81) - >Выбрана статистика для файлов : 
+INFO  2024-02-29 07:39:30 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:82) - ________________________________________________________
+INFO  2024-02-29 07:48:33 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:287) - >для опции -o программа не смогла найти указанную директорию либо вы её не указали
+INFO  2024-02-29 07:48:33 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:301) - >Введите путь для сортированных файлов или "/default" для выбора стандартной директории: 
+INFO  2024-02-29 07:48:37 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:305) - >Отсортированные файлы будут храниться в папке: C:\OTUS\test-java-sort-file-contents\input files
+INFO  2024-02-29 07:48:37 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:75) - ________________________________________________________
+INFO  2024-02-29 07:48:37 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:76) - >>>>>Информация о ввёденных условиях программы<<<<<<
+INFO  2024-02-29 07:48:37 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:86) - >Выбранные файлы для сортировки: 
+INFO  2024-02-29 07:48:37 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:88) - [in1.txt] - C:\OTUS\test-java-sort-file-contents\input files\in1.txt
+INFO  2024-02-29 07:48:37 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:88) - [in2.txt] - C:\OTUS\test-java-sort-file-contents\input files\in2.txt
+INFO  2024-02-29 07:48:37 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:78) - >Директория для исходящих файлов: C:\OTUS\test-java-sort-file-contents\input files
+INFO  2024-02-29 07:48:37 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:80) - >Префикс имени сортированных файлов: sample_
+INFO  2024-02-29 07:48:37 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:81) - >Выбрана статистика для файлов : 
+INFO  2024-02-29 07:48:37 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:82) - ________________________________________________________
+INFO  2024-02-29 07:49:27 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:287) - >для опции -o программа не смогла найти указанную директорию либо вы её не указали
+INFO  2024-02-29 07:49:27 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:301) - >Введите путь для сортированных файлов или "/default" для выбора стандартной директории: 
+INFO  2024-02-29 07:49:31 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:305) - >Отсортированные файлы будут храниться в папке: C:\OTUS\test-java-sort-file-contents\input files
+INFO  2024-02-29 07:49:31 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:75) - ________________________________________________________
+INFO  2024-02-29 07:49:31 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:76) - >>>>>Информация о ввёденных условиях программы<<<<<<
+INFO  2024-02-29 07:49:31 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:86) - >Выбранные файлы для сортировки: 
+INFO  2024-02-29 07:49:31 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:88) - [in1.txt] - C:\OTUS\test-java-sort-file-contents\input files\in1.txt
+INFO  2024-02-29 07:49:31 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:88) - [in2.txt] - C:\OTUS\test-java-sort-file-contents\input files\in2.txt
+INFO  2024-02-29 07:49:31 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:78) - >Директория для исходящих файлов: C:\OTUS\test-java-sort-file-contents\input files
+INFO  2024-02-29 07:49:31 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:80) - >Префикс имени сортированных файлов: sample_
+INFO  2024-02-29 07:49:31 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:81) - >Выбрана статистика для файлов : 
+INFO  2024-02-29 07:49:31 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:82) - ________________________________________________________
+INFO  2024-02-29 07:56:14 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:287) - >для опции -o программа не смогла найти указанную директорию либо вы её не указали
+INFO  2024-02-29 07:56:14 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:301) - >Введите путь для сортированных файлов или "/default" для выбора стандартной директории: 
+INFO  2024-02-29 07:56:18 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:305) - >Отсортированные файлы будут храниться в папке: C:\OTUS\test-java-sort-file-contents\input files
+INFO  2024-02-29 07:56:18 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:75) - ________________________________________________________
+INFO  2024-02-29 07:56:18 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:76) - >>>>>Информация о ввёденных условиях программы<<<<<<
+INFO  2024-02-29 07:56:18 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:86) - >Выбранные файлы для сортировки: 
+INFO  2024-02-29 07:56:18 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:88) - [in1.txt] - C:\OTUS\test-java-sort-file-contents\input files\in1.txt
+INFO  2024-02-29 07:56:18 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:88) - [in2.txt] - C:\OTUS\test-java-sort-file-contents\input files\in2.txt
+INFO  2024-02-29 07:56:18 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:78) - >Директория для исходящих файлов: C:\OTUS\test-java-sort-file-contents\input files
+INFO  2024-02-29 07:56:18 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:80) - >Префикс имени сортированных файлов: sample_
+INFO  2024-02-29 07:56:18 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:81) - >Выбрана статистика для файлов : 
+INFO  2024-02-29 07:56:18 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:82) - ________________________________________________________
+INFO  2024-02-29 07:56:45 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:287) - >для опции -o программа не смогла найти указанную директорию либо вы её не указали
+INFO  2024-02-29 07:56:45 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:301) - >Введите путь для сортированных файлов или "/default" для выбора стандартной директории: 
+INFO  2024-02-29 07:56:48 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:305) - >Отсортированные файлы будут храниться в папке: C:\OTUS\test-java-sort-file-contents\input files
+INFO  2024-02-29 07:56:48 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:75) - ________________________________________________________
+INFO  2024-02-29 07:56:48 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:76) - >>>>>Информация о ввёденных условиях программы<<<<<<
+INFO  2024-02-29 07:56:48 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:86) - >Выбранные файлы для сортировки: 
+INFO  2024-02-29 07:56:48 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:88) - [in1.txt] - C:\OTUS\test-java-sort-file-contents\input files\in1.txt
+INFO  2024-02-29 07:56:48 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:88) - [in2.txt] - C:\OTUS\test-java-sort-file-contents\input files\in2.txt
+INFO  2024-02-29 07:56:48 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:78) - >Директория для исходящих файлов: C:\OTUS\test-java-sort-file-contents\input files
+INFO  2024-02-29 07:56:48 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:80) - >Префикс имени сортированных файлов: sample_
+INFO  2024-02-29 07:56:48 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:81) - >Выбрана статистика для файлов : 
+INFO  2024-02-29 07:56:48 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:82) - ________________________________________________________
+INFO  2024-02-29 07:56:57 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:287) - >для опции -o программа не смогла найти указанную директорию либо вы её не указали
+INFO  2024-02-29 07:56:57 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:301) - >Введите путь для сортированных файлов или "/default" для выбора стандартной директории: 
+INFO  2024-02-29 07:57:01 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:305) - >Отсортированные файлы будут храниться в папке: C:\OTUS\test-java-sort-file-contents\input files
+INFO  2024-02-29 07:57:01 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:75) - ________________________________________________________
+INFO  2024-02-29 07:57:01 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:76) - >>>>>Информация о ввёденных условиях программы<<<<<<
+INFO  2024-02-29 07:57:01 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:86) - >Выбранные файлы для сортировки: 
+INFO  2024-02-29 07:57:01 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:88) - [in1.txt] - C:\OTUS\test-java-sort-file-contents\input files\in1.txt
+INFO  2024-02-29 07:57:01 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:88) - [in2.txt] - C:\OTUS\test-java-sort-file-contents\input files\in2.txt
+INFO  2024-02-29 07:57:01 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:78) - >Директория для исходящих файлов: C:\OTUS\test-java-sort-file-contents\input files
+INFO  2024-02-29 07:57:01 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:80) - >Префикс имени сортированных файлов: sample_
+INFO  2024-02-29 07:57:01 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:81) - >Выбрана статистика для файлов : 
+INFO  2024-02-29 07:57:01 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:82) - ________________________________________________________
+INFO  2024-02-29 12:00:14 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:291) - >для опции -o программа не смогла найти указанную директорию либо вы её не указали
+INFO  2024-02-29 12:00:14 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:305) - >Введите путь для сортированных файлов или "/default" для выбора стандартной директории: 
+INFO  2024-02-29 12:00:29 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:291) - >для опции -o программа не смогла найти указанную директорию либо вы её не указали
+INFO  2024-02-29 12:00:29 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:305) - >Введите путь для сортированных файлов или "/default" для выбора стандартной директории: 
+INFO  2024-02-29 12:09:33 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:291) - >для опции -o программа не смогла найти указанную директорию либо вы её не указали
+INFO  2024-02-29 12:09:33 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:305) - >Введите путь для сортированных файлов или "/default" для выбора стандартной директории: 
+INFO  2024-02-29 12:09:37 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:309) - >Отсортированные файлы будут храниться в папке: C:\OTUS\test-java-sort-file-contents\input files
+INFO  2024-02-29 12:09:37 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:79) - ________________________________________________________
+INFO  2024-02-29 12:09:37 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:80) - >>>>>Информация о ввёденных условиях программы<<<<<<
+INFO  2024-02-29 12:09:37 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:90) - >Выбранные файлы для сортировки: 
+INFO  2024-02-29 12:09:37 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:92) - [in1.txt] - C:\OTUS\test-java-sort-file-contents\input files\in1.txt
+INFO  2024-02-29 12:09:37 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:92) - [in2.txt] - C:\OTUS\test-java-sort-file-contents\input files\in2.txt
+INFO  2024-02-29 12:09:37 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:82) - >Директория для исходящих файлов: C:\OTUS\test-java-sort-file-contents\input files
+INFO  2024-02-29 12:09:37 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:84) - >Префикс имени сортированных файлов: sample_
+INFO  2024-02-29 12:09:37 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:85) - >Выбрана статистика для файлов : 
+INFO  2024-02-29 12:09:37 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:86) - ________________________________________________________
+INFO  2024-02-29 12:10:07 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:291) - >для опции -o программа не смогла найти указанную директорию либо вы её не указали
+INFO  2024-02-29 12:10:07 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:305) - >Введите путь для сортированных файлов или "/default" для выбора стандартной директории: 
+INFO  2024-02-29 12:10:15 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:309) - >Отсортированные файлы будут храниться в папке: C:\OTUS\test-java-sort-file-contents\input files
+INFO  2024-02-29 12:10:15 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:79) - ________________________________________________________
+INFO  2024-02-29 12:10:15 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:80) - >>>>>Информация о ввёденных условиях программы<<<<<<
+INFO  2024-02-29 12:10:15 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:90) - >Выбранные файлы для сортировки: 
+INFO  2024-02-29 12:10:15 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:92) - [in1.txt] - C:\OTUS\test-java-sort-file-contents\input files\in1.txt
+INFO  2024-02-29 12:10:15 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:92) - [in2.txt] - C:\OTUS\test-java-sort-file-contents\input files\in2.txt
+INFO  2024-02-29 12:10:15 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:82) - >Директория для исходящих файлов: C:\OTUS\test-java-sort-file-contents\input files
+INFO  2024-02-29 12:10:15 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:84) - >Префикс имени сортированных файлов: sample_
+INFO  2024-02-29 12:10:15 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:85) - >Выбрана статистика для файлов : 
+INFO  2024-02-29 12:10:15 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:86) - ________________________________________________________
+INFO  2024-02-29 19:20:45 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:291) - >для опции -o программа не смогла найти указанную директорию либо вы её не указали
+INFO  2024-02-29 19:20:45 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:305) - >Введите путь для сортированных файлов или "/default" для выбора стандартной директории: 
+INFO  2024-02-29 19:20:48 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:309) - >Отсортированные файлы будут храниться в папке: C:\OTUS\test-java-sort-file-contents\input files
+INFO  2024-02-29 19:20:48 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:79) - ________________________________________________________
+INFO  2024-02-29 19:20:48 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:80) - >>>>>Информация о ввёденных условиях программы<<<<<<
+INFO  2024-02-29 19:20:48 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:90) - >Выбранные файлы для сортировки: 
+INFO  2024-02-29 19:20:48 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:92) - [in1.txt] - C:\OTUS\test-java-sort-file-contents\input files\in1.txt
+INFO  2024-02-29 19:20:48 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:92) - [in2.txt] - C:\OTUS\test-java-sort-file-contents\input files\in2.txt
+INFO  2024-02-29 19:20:48 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:82) - >Директория для исходящих файлов: C:\OTUS\test-java-sort-file-contents\input files
+INFO  2024-02-29 19:20:48 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:84) - >Префикс имени сортированных файлов: sample_
+INFO  2024-02-29 19:20:48 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:85) - >Выбрана статистика для файлов: -r
+INFO  2024-02-29 19:20:48 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:86) - ________________________________________________________
+INFO  2024-02-29 19:21:45 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:291) - >для опции -o программа не смогла найти указанную директорию либо вы её не указали
+INFO  2024-02-29 19:21:45 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:305) - >Введите путь для сортированных файлов или "/default" для выбора стандартной директории: 
+INFO  2024-02-29 19:21:49 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:309) - >Отсортированные файлы будут храниться в папке: C:\OTUS\test-java-sort-file-contents\input files
+INFO  2024-02-29 19:21:49 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:79) - ________________________________________________________
+INFO  2024-02-29 19:21:49 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:80) - >>>>>Информация о ввёденных условиях программы<<<<<<
+INFO  2024-02-29 19:21:49 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:90) - >Выбранные файлы для сортировки: 
+INFO  2024-02-29 19:21:49 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:92) - [in1.txt] - C:\OTUS\test-java-sort-file-contents\input files\in1.txt
+INFO  2024-02-29 19:21:49 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:92) - [in2.txt] - C:\OTUS\test-java-sort-file-contents\input files\in2.txt
+INFO  2024-02-29 19:21:49 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:82) - >Директория для исходящих файлов: C:\OTUS\test-java-sort-file-contents\input files
+INFO  2024-02-29 19:21:49 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:84) - >Префикс имени сортированных файлов: sample_
+INFO  2024-02-29 19:21:49 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:85) - >Выбрана статистика для файлов: -r
+INFO  2024-02-29 19:21:49 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:86) - ________________________________________________________
+INFO  2024-02-29 19:26:13 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:291) - >для опции -o программа не смогла найти указанную директорию либо вы её не указали
+INFO  2024-02-29 19:26:13 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:305) - >Введите путь для сортированных файлов или "/default" для выбора стандартной директории: 
+INFO  2024-02-29 19:26:19 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:309) - >Отсортированные файлы будут храниться в папке: C:\OTUS\test-java-sort-file-contents\input files
+INFO  2024-02-29 19:26:19 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:79) - ________________________________________________________
+INFO  2024-02-29 19:26:19 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:80) - >>>>>Информация о ввёденных условиях программы<<<<<<
+INFO  2024-02-29 19:26:19 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:90) - >Выбранные файлы для сортировки: 
+INFO  2024-02-29 19:26:19 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:92) - [in1.txt] - C:\OTUS\test-java-sort-file-contents\input files\in1.txt
+INFO  2024-02-29 19:26:19 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:92) - [in2.txt] - C:\OTUS\test-java-sort-file-contents\input files\in2.txt
+INFO  2024-02-29 19:26:19 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:82) - >Директория для исходящих файлов: C:\OTUS\test-java-sort-file-contents\input files
+INFO  2024-02-29 19:26:19 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:84) - >Префикс имени сортированных файлов: sample_
+INFO  2024-02-29 19:26:19 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:85) - >Выбрана статистика для файлов: -r
+INFO  2024-02-29 19:26:19 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:86) - ________________________________________________________
+INFO  2024-02-29 19:26:32 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:291) - >для опции -o программа не смогла найти указанную директорию либо вы её не указали
+INFO  2024-02-29 19:26:32 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:305) - >Введите путь для сортированных файлов или "/default" для выбора стандартной директории: 
+INFO  2024-02-29 19:26:37 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:309) - >Отсортированные файлы будут храниться в папке: C:\OTUS\test-java-sort-file-contents\input files
+INFO  2024-02-29 19:26:37 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:79) - ________________________________________________________
+INFO  2024-02-29 19:26:37 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:80) - >>>>>Информация о ввёденных условиях программы<<<<<<
+INFO  2024-02-29 19:26:37 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:90) - >Выбранные файлы для сортировки: 
+INFO  2024-02-29 19:26:37 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:92) - [in1.txt] - C:\OTUS\test-java-sort-file-contents\input files\in1.txt
+INFO  2024-02-29 19:26:37 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:92) - [in2.txt] - C:\OTUS\test-java-sort-file-contents\input files\in2.txt
+INFO  2024-02-29 19:26:37 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:82) - >Директория для исходящих файлов: C:\OTUS\test-java-sort-file-contents\input files
+INFO  2024-02-29 19:26:37 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:84) - >Префикс имени сортированных файлов: sample_
+INFO  2024-02-29 19:26:37 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:85) - >Выбрана статистика для файлов: -r
+INFO  2024-02-29 19:26:37 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:86) - ________________________________________________________
+INFO  2024-02-29 19:26:50 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:291) - >для опции -o программа не смогла найти указанную директорию либо вы её не указали
+INFO  2024-02-29 19:26:50 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:305) - >Введите путь для сортированных файлов или "/default" для выбора стандартной директории: 
+INFO  2024-02-29 19:26:56 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:309) - >Отсортированные файлы будут храниться в папке: C:\OTUS\test-java-sort-file-contents\input files
+INFO  2024-02-29 19:26:56 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:79) - ________________________________________________________
+INFO  2024-02-29 19:26:56 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:80) - >>>>>Информация о ввёденных условиях программы<<<<<<
+INFO  2024-02-29 19:26:56 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:90) - >Выбранные файлы для сортировки: 
+INFO  2024-02-29 19:26:56 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:92) - [in1.txt] - C:\OTUS\test-java-sort-file-contents\input files\in1.txt
+INFO  2024-02-29 19:26:56 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:92) - [in2.txt] - C:\OTUS\test-java-sort-file-contents\input files\in2.txt
+INFO  2024-02-29 19:26:56 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:82) - >Директория для исходящих файлов: C:\OTUS\test-java-sort-file-contents\input files
+INFO  2024-02-29 19:26:56 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:84) - >Префикс имени сортированных файлов: sample_
+INFO  2024-02-29 19:26:56 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:85) - >Выбрана статистика для файлов: -r
+INFO  2024-02-29 19:26:56 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:86) - ________________________________________________________
+INFO  2024-02-29 19:27:13 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:291) - >для опции -o программа не смогла найти указанную директорию либо вы её не указали
+INFO  2024-02-29 19:27:13 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:305) - >Введите путь для сортированных файлов или "/default" для выбора стандартной директории: 
+INFO  2024-02-29 19:27:16 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:309) - >Отсортированные файлы будут храниться в папке: C:\OTUS\test-java-sort-file-contents\input files
+INFO  2024-02-29 19:27:16 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:79) - ________________________________________________________
+INFO  2024-02-29 19:27:16 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:80) - >>>>>Информация о ввёденных условиях программы<<<<<<
+INFO  2024-02-29 19:27:16 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:90) - >Выбранные файлы для сортировки: 
+INFO  2024-02-29 19:27:16 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:92) - [in1.txt] - C:\OTUS\test-java-sort-file-contents\input files\in1.txt
+INFO  2024-02-29 19:27:16 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:92) - [in2.txt] - C:\OTUS\test-java-sort-file-contents\input files\in2.txt
+INFO  2024-02-29 19:27:16 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:82) - >Директория для исходящих файлов: C:\OTUS\test-java-sort-file-contents\input files
+INFO  2024-02-29 19:27:16 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:84) - >Префикс имени сортированных файлов: sample_
+INFO  2024-02-29 19:27:16 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:85) - >Выбрана статистика для файлов: -r
+INFO  2024-02-29 19:27:16 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:86) - ________________________________________________________
+INFO  2024-02-29 19:29:08 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:291) - >для опции -o программа не смогла найти указанную директорию либо вы её не указали
+INFO  2024-02-29 19:29:08 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:305) - >Введите путь для сортированных файлов или "/default" для выбора стандартной директории: 
+INFO  2024-02-29 19:29:12 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:309) - >Отсортированные файлы будут храниться в папке: C:\OTUS\test-java-sort-file-contents\input files
+INFO  2024-02-29 19:29:12 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:79) - ________________________________________________________
+INFO  2024-02-29 19:29:12 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:80) - >>>>>Информация о ввёденных условиях программы<<<<<<
+INFO  2024-02-29 19:29:12 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:90) - >Выбранные файлы для сортировки: 
+INFO  2024-02-29 19:29:12 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:92) - [in1.txt] - C:\OTUS\test-java-sort-file-contents\input files\in1.txt
+INFO  2024-02-29 19:29:12 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:92) - [in2.txt] - C:\OTUS\test-java-sort-file-contents\input files\in2.txt
+INFO  2024-02-29 19:29:12 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:82) - >Директория для исходящих файлов: C:\OTUS\test-java-sort-file-contents\input files
+INFO  2024-02-29 19:29:12 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:84) - >Префикс имени сортированных файлов: sample_
+INFO  2024-02-29 19:29:12 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:85) - >Выбрана статистика для файлов: -r
+INFO  2024-02-29 19:29:12 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:86) - ________________________________________________________
+INFO  2024-02-29 19:37:42 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:291) - >для опции -o программа не смогла найти указанную директорию либо вы её не указали
+INFO  2024-02-29 19:37:42 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:305) - >Введите путь для сортированных файлов или "/default" для выбора стандартной директории: 
+INFO  2024-02-29 19:37:47 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:309) - >Отсортированные файлы будут храниться в папке: C:\OTUS\test-java-sort-file-contents\input files
+INFO  2024-02-29 19:37:47 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:79) - ________________________________________________________
+INFO  2024-02-29 19:37:47 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:80) - >>>>>Информация о ввёденных условиях программы<<<<<<
+INFO  2024-02-29 19:37:47 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:90) - >Выбранные файлы для сортировки: 
+INFO  2024-02-29 19:37:47 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:92) - [in1.txt] - C:\OTUS\test-java-sort-file-contents\input files\in1.txt
+INFO  2024-02-29 19:37:47 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:92) - [in2.txt] - C:\OTUS\test-java-sort-file-contents\input files\in2.txt
+INFO  2024-02-29 19:37:47 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:82) - >Директория для исходящих файлов: C:\OTUS\test-java-sort-file-contents\input files
+INFO  2024-02-29 19:37:47 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:84) - >Префикс имени сортированных файлов: sample_
+INFO  2024-02-29 19:37:47 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:85) - >Выбрана статистика для файлов: -r
+INFO  2024-02-29 19:37:47 [main] ru.naumkin.java.test.sort.file.contents.UserCommandHandler (UserCommandHandler.java:86) - ________________________________________________________
