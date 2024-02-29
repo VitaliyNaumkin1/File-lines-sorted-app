@@ -5,6 +5,8 @@ import org.apache.commons.lang3.math.NumberUtils;
 import ru.naumkin.java.test.sort.file.contents.enums.StatisticMode;
 import ru.naumkin.java.test.sort.file.contents.enums.TypeOfData;
 import ru.naumkin.java.test.sort.file.contents.statisticrecorder.*;
+import ru.naumkin.java.test.sort.file.contents.statisticrecorder.fullstatisticrecorders.FullFloatStatisticRecorder;
+import ru.naumkin.java.test.sort.file.contents.statisticrecorder.fullstatisticrecorders.FullIntegerStatisticRecorder;
 
 import java.io.*;
 import java.nio.charset.StandardCharsets;
@@ -35,7 +37,7 @@ public class FileContentSorter {
         this.fileAndPointerPosition = new TreeMap<>();
         this.userCommandHandler = userCommandHandler;
         this.filesToSort = userCommandHandler.getInputFiles();
-        this.directoryForSortedFiles = userCommandHandler.getDirectoryForSortedFiles(); // Надо убрать т.к мы можем просто брать директорию из userCommandHandlera
+        this.directoryForSortedFiles = userCommandHandler.getDirectoryForSortedFiles();
         this.namePrefix = userCommandHandler.getNamePrefixForSortedFiles();
         this.statisticMode = userCommandHandler.getStatisticMode();
         this.abstractStatisticRecorderList = new ArrayList<>();
@@ -121,12 +123,7 @@ public class FileContentSorter {
         }
     }
 
-
-    /**
-     * походу надо добавить то что бы создавались дирректории для файлов еще , надо посмотреть , как это сделать.
-     */
-
-    public void writeLineInToSortedFile(TypeOfData typeOfData, String line) {  ///Тут надо походу добавить отдельный метод который создает имя что бы каждый раз не создавать.для каждого
+    public void writeLineInToSortedFile(TypeOfData typeOfData, String line) {
         Path pathToCreatableFile = null;
         StringBuilder namePrefix = new StringBuilder(userCommandHandler.getNamePrefixForSortedFiles());
 
@@ -136,7 +133,7 @@ public class FileContentSorter {
         }
         if (typeOfData.equals(TypeOfData.INTEGER)) {
             String fileName = namePrefix.append("integers.txt").toString();
-            pathToCreatableFile = directoryForSortedFiles.resolve(fileName);  ////может тоже так же вынести
+            pathToCreatableFile = directoryForSortedFiles.resolve(fileName);
         }
         if (typeOfData.equals(TypeOfData.FLOAT)) {
             String fileName = namePrefix.append("floats.txt").toString();
@@ -150,9 +147,6 @@ public class FileContentSorter {
         }
     }
 
-    /*
-    EXCEPTION
-     */
     public void createDirectoriesForOutputFiles(Path dirForSortedFiles) {
         try {
             if (Files.exists(dirForSortedFiles)) {

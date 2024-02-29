@@ -28,6 +28,4 @@ public class ShortStatisticRecorder implements AbstractStatisticRecorder {
     public String toString() {
         return "тип данных: " + typeOfData + " ,количество записанных элементов: " + countOfElementsWrittenToFile;
     }
-
-
 }

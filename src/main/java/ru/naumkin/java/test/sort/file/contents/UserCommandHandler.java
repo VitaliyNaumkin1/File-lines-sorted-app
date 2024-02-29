@@ -51,12 +51,11 @@ public class UserCommandHandler {
         run();
     }
 
-    //java -jar util.jar -s -a -p sample- in1.txt in2.txt
     private void run() {
         getOptionsFromUserInputLine();
         setDirForSortedFiles();
         try {
-            getFilesForSorting(); /// наверное зря сюда пробросил обработку
+            getFilesForSorting();
         } catch (InvalidPathException e) {
             e.printStackTrace();
         }
@@ -64,9 +63,7 @@ public class UserCommandHandler {
         printAllInformation();
     }
 
-    /**
-     *
-     */
+
     private void printAllInformation() {
         System.out.println("________________________________________________________");
         System.out.println(">>>>>Информация о ввёденных условиях программы<<<<<<");
@@ -87,30 +84,19 @@ public class UserCommandHandler {
 
     private void getFilesForSorting() throws InvalidPathException {
         if (getInputFilesFromUserLine()) {
-            return;  ///нужно проверить не пустые ли файлы для сортировки, есть ли в них что то ..Отдельный метод. Или же впихнуть  askUserEnterFilesForSorting() в конец выше
+            return;
         }
         askUserEnterFilesForSorting();
     }
 
-
-    /**
-     * переделать класс. немного коряво работает логика в плане вывода информации
-     */
-    private void askUserEnterFilesForSorting() throws InvalidPathException {  //--------RunTimeExeption пробросить и выше словить именно InvalidPathException
+    private void askUserEnterFilesForSorting() throws InvalidPathException {
         while (true) {
             printInputFilesFromDefaultDir();
             if (inputFiles.isEmpty()) {
                 System.out.println(">Вы не добавили файлы к сортировке или указанные файлы не найдены.Введите путь к файлу который хотите добавить к сортировке или имя файла из стандартной директории: ");
             }
             String userText = scanner.nextLine();
-//            Path path = Paths.get(userText);
-//            System.out.println("paht= " + path);
-//            if (Files.isDirectory(path)) {
-//                logger.info("указанный путь ведёт не к файлу");
-//                continue;
-//            }
-
-            if (!userText.endsWith(".txt")) {             ///Возможжно это надо вынести в метод т..к уже два раза повторяется
+            if (!userText.endsWith(".txt")) {
                 System.out.printf("Не удалось добавить файл %s. Введите имя файла вместе с его расширением - txt. Например: file1.txt\n", userText);
                 continue;
             }
@@ -131,8 +117,6 @@ public class UserCommandHandler {
                 System.out.printf("%s не является файлом \n", path.toAbsolutePath()); /// тут щее надо подумать что может быть итддддд
             }
 
-//            inputFiles.add(new File(path.toString()));
-//            logger.info(">Вы добавили файл {} в список для сортировки. ", path.toAbsolutePath());
             while (true) {
                 System.out.println(">Введите 1 если хотите добавить еще файл, 0 - если хотите начать сортировку?");
                 String userNumber = scanner.nextLine();
