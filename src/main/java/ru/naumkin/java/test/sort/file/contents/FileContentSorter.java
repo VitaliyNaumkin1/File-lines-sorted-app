@@ -27,10 +27,10 @@ public class FileContentSorter {
     private final StatisticMode statisticMode;
     private final Map<File, Long> fileAndPointerPosition;
 
-    private final List<AbstractStatisticRecorder> abstractStatisticRecorderList;
+    private final List<StatisticRecorder> statisticRecorderList;
 
-    public List<AbstractStatisticRecorder> getAbstractStatisticRecorderList() {
-        return abstractStatisticRecorderList;
+    public List<StatisticRecorder> getAbstractStatisticRecorderList() {
+        return statisticRecorderList;
     }
 
     public FileContentSorter(UserCommandHandler userCommandHandler) {
@@ -40,7 +40,7 @@ public class FileContentSorter {
         this.directoryForSortedFiles = userCommandHandler.getDirectoryForSortedFiles();
         this.namePrefix = userCommandHandler.getNamePrefixForSortedFiles();
         this.statisticMode = userCommandHandler.getStatisticMode();
-        this.abstractStatisticRecorderList = new ArrayList<>();
+        this.statisticRecorderList = new ArrayList<>();
         run();
     }
 
@@ -52,13 +52,13 @@ public class FileContentSorter {
 
     public void createStatisticsRecorders() {
         if (statisticMode.equals(StatisticMode.SHORT)) {
-            abstractStatisticRecorderList.add(new ShortStatisticRecorder(TypeOfData.STRING));
-            abstractStatisticRecorderList.add(new ShortStatisticRecorder(TypeOfData.FLOAT));
-            abstractStatisticRecorderList.add(new ShortStatisticRecorder(TypeOfData.INTEGER));
+            statisticRecorderList.add(new ShortStatisticRecorder(TypeOfData.STRING));
+            statisticRecorderList.add(new ShortStatisticRecorder(TypeOfData.FLOAT));
+            statisticRecorderList.add(new ShortStatisticRecorder(TypeOfData.INTEGER));
         } else {
-            abstractStatisticRecorderList.add(new FullStringsStatisticRecorder(TypeOfData.STRING));
-            abstractStatisticRecorderList.add(new FullIntegerStatisticRecorder(TypeOfData.INTEGER));
-            abstractStatisticRecorderList.add(new FullFloatStatisticRecorder(TypeOfData.FLOAT));
+            statisticRecorderList.add(new FullStringsStatisticRecorder(TypeOfData.STRING));
+            statisticRecorderList.add(new FullIntegerStatisticRecorder(TypeOfData.INTEGER));
+            statisticRecorderList.add(new FullFloatStatisticRecorder(TypeOfData.FLOAT));
         }
     }
 
@@ -116,7 +116,7 @@ public class FileContentSorter {
     }
 
     public void addToStatistic2(TypeOfData typeOfData, String line) {
-        for (AbstractStatisticRecorder recorder : abstractStatisticRecorderList) {
+        for (StatisticRecorder recorder : statisticRecorderList) {
             if (recorder.getTypeOfData().equals(typeOfData)) {
                 recorder.addToStatistic(line);
             }

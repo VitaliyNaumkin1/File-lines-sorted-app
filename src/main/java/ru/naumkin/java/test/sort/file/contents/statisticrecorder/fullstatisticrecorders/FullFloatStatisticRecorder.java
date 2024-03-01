@@ -2,12 +2,12 @@ package ru.naumkin.java.test.sort.file.contents.statisticrecorder.fullstatisticr
 
 import org.apache.commons.lang3.math.NumberUtils;
 import ru.naumkin.java.test.sort.file.contents.enums.TypeOfData;
-import ru.naumkin.java.test.sort.file.contents.statisticrecorder.AbstractStatisticRecorder;
+import ru.naumkin.java.test.sort.file.contents.statisticrecorder.StatisticRecorder;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 
-public class FullFloatStatisticRecorder extends FullNumbersStatisticRecorder implements AbstractStatisticRecorder {
+public class FullFloatStatisticRecorder extends FullNumbersStatisticRecorder implements StatisticRecorder {
 
     public FullFloatStatisticRecorder(TypeOfData typeOfData) {
         super(typeOfData);

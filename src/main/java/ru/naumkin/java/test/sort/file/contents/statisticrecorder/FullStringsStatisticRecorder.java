@@ -2,7 +2,7 @@ package ru.naumkin.java.test.sort.file.contents.statisticrecorder;
 
 import ru.naumkin.java.test.sort.file.contents.enums.TypeOfData;
 
-public class FullStringsStatisticRecorder implements AbstractStatisticRecorder {
+public class FullStringsStatisticRecorder implements StatisticRecorder {
     private long minLength;
     private long maxLength;
     private long countOfElementsWrittenToFile;

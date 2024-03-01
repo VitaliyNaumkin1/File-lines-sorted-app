@@ -1,7 +1,7 @@
 package ru.naumkin.java.test.sort.file.contents;
 
 import ru.naumkin.java.test.sort.file.contents.enums.StatisticMode;
-import ru.naumkin.java.test.sort.file.contents.statisticrecorder.AbstractStatisticRecorder;
+import ru.naumkin.java.test.sort.file.contents.statisticrecorder.StatisticRecorder;
 
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -25,8 +25,8 @@ public class FileLineSorterApp {
         } else {
             System.out.println("Полная информация о сортированных файлах: ");
         }
-        List<AbstractStatisticRecorder> recorders = fileContentSorter.getAbstractStatisticRecorderList();
-        for (AbstractStatisticRecorder recorder : recorders) {
+        List<StatisticRecorder> recorders = fileContentSorter.getAbstractStatisticRecorderList();
+        for (StatisticRecorder recorder : recorders) {
             System.out.println(recorder.toString());
         }
     }
